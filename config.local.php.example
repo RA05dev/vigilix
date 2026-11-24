@@ -1,8 +1,12 @@
 <?php
-// Copia este archivo como config.local.php y usa la NUEVA contraseña rotada en InfinityFree.
+// Copia este archivo como config.local.php y completa tus credenciales reales.
 return [
     'host' => 'TU_HOST_MYSQL',
     'user' => 'TU_USUARIO_MYSQL',
     'pass' => 'TU_NUEVA_CONTRASENA_MYSQL',
     'db' => 'TU_BASE_DE_DATOS',
+    // Opcional: coloca tu API Key de Google AI Studio (Gemini) para activar el chatbot con IA real.
+    // Si se deja vacío, el chatbot usará automáticamente el buscador inteligente local.
+    'gemini_api_key' => '',
+    'gemini_model' => 'gemini-2.5-flash',
 ];

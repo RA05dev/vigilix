@@ -1,0 +1,286 @@
+{
+    "exportFormatVersion": 2,
+    "exportTime": "2026-11-24 16:02:05",
+    "containerVersion": {
+        "path": "accounts/6401408716/containers/288455565/versions/2",
+        "accountId": "6401408716",
+        "containerId": "288455565",
+        "containerVersionId": "2",
+        "name": "Medición web de Vigilix",
+        "description": "Nuevo flujo GA4. Etiqueta base y seguimiento residencial y de cotización corporativa.",
+        "container": {
+            "path": "accounts/6401408716/containers/288455565",
+            "accountId": "6401408716",
+            "containerId": "288455565",
+            "name": "Vigilix Web",
+            "publicId": "GTM-WQHF4V39",
+            "usageContext": [
+                "WEB"
+            ],
+            "fingerprint": "1795486246821",
+            "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6401408716/containers/288455565/workspaces?apiLink=container",
+            "features": {
+                "supportUserPermissions": true,
+                "supportEnvironments": true,
+                "supportWorkspaces": true,
+                "supportGtagConfigs": false,
+                "supportBuiltInVariables": true,
+                "supportClients": false,
+                "supportFolders": true,
+                "supportTags": true,
+                "supportTemplates": true,
+                "supportTriggers": true,
+                "supportVariables": true,
+                "supportVersions": true,
+                "supportZones": true,
+                "supportTransformations": false
+            },
+            "tagIds": [
+                "GTM-WQHF4V39"
+            ]
+        },
+        "tag": [
+            {
+                "accountId": "6401408716",
+                "containerId": "288455565",
+                "tagId": "3",
+                "name": "GA4 - Configuración principal",
+                "type": "dest_ga",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "destinationId",
+                        "value": "G-TES1PTER6D"
+                    }
+                ],
+                "fingerprint": "1795486374395",
+                "firingTriggerId": [
+                    "2147479573"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6401408716",
+                "containerId": "288455565",
+                "tagId": "7",
+                "name": "GA4 - Recorrido residencial",
+                "type": "gaawe",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "sendEcommerceData",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "getEcommerceDataFrom",
+                        "value": "dataLayer"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventName",
+                        "value": "{{Event}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "measurementIdOverride",
+                        "value": "G-TES1PTER6D"
+                    }
+                ],
+                "fingerprint": "1795486497773",
+                "firingTriggerId": [
+                    "6"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6401408716",
+                "containerId": "288455565",
+                "tagId": "9",
+                "name": "GA4 - Cotización corporativa",
+                "type": "gaawe",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "sendEcommerceData",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventName",
+                        "value": "{{Event}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "measurementIdOverride",
+                        "value": "G-TES1PTER6D"
+                    }
+                ],
+                "fingerprint": "1795486639857",
+                "firingTriggerId": [
+                    "8"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            }
+        ],
+        "trigger": [
+            {
+                "accountId": "6401408716",
+                "containerId": "288455565",
+                "triggerId": "6",
+                "name": "Eventos del recorrido residencial",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "MATCH_REGEX",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "^(view_item|add_to_cart|view_cart|begin_checkout|add_shipping_info|add_payment_info|pedido_demo_confirmado)$"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1795486482350"
+            },
+            {
+                "accountId": "6401408716",
+                "containerId": "288455565",
+                "triggerId": "8",
+                "name": "Eventos de cotización corporativa",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "MATCH_REGEX",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "^(ver_formulario_cotizacion|generate_lead)$"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1795486634970"
+            }
+        ],
+        "builtInVariable": [
+            {
+                "accountId": "6401408716",
+                "containerId": "288455565",
+                "type": "PAGE_URL",
+                "name": "Page URL"
+            },
+            {
+                "accountId": "6401408716",
+                "containerId": "288455565",
+                "type": "PAGE_HOSTNAME",
+                "name": "Page Hostname"
+            },
+            {
+                "accountId": "6401408716",
+                "containerId": "288455565",
+                "type": "PAGE_PATH",
+                "name": "Page Path"
+            },
+            {
+                "accountId": "6401408716",
+                "containerId": "288455565",
+                "type": "REFERRER",
+                "name": "Referrer"
+            },
+            {
+                "accountId": "6401408716",
+                "containerId": "288455565",
+                "type": "EVENT",
+                "name": "Event"
+            }
+        ],
+        "fingerprint": "1795486719128",
+        "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/6401408716/containers/288455565/versions/2?apiLink=version",
+        "gtagConfig": [
+            {
+                "accountId": "6401408716",
+                "containerId": "288455565",
+                "gtagConfigId": "4",
+                "type": "ogt_auto_events",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableOutboundClick",
+                        "value": "true"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableScroll",
+                        "value": "true"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableDownload",
+                        "value": "true"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableHistoryEvents",
+                        "value": "true"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableForm",
+                        "value": "true"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableVideo",
+                        "value": "true"
+                    }
+                ],
+                "fingerprint": "1795486374416"
+            },
+            {
+                "accountId": "6401408716",
+                "containerId": "288455565",
+                "gtagConfigId": "5",
+                "type": "ogt_1p_data_v2",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "isEnabled",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1795486663915"
+            }
+        ]
+    }
+}

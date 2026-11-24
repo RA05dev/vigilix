@@ -2,51 +2,114 @@
 <html lang="es">
 
 <head>
-    <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-WQHF4V39"></script>
-    <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments) } gtag('js', new Date());</script>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WQHF4V39');</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
     <meta name="robots" content="noindex">
     <title>Pedido generado | Vigilix</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="checkout.css?v=20261124-4">
+    <link rel="stylesheet" href="checkout.css?v=20261124-11">
 </head>
 
-<body>
-    <header class="site-header">
+<body data-checkout-page="gracias">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WQHF4V39" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <header class="site-header no-print">
         <div class="header-inner"><a class="brand" href="../index.html"><span>◆</span> VIGILIX</a></div>
     </header>
+
     <main class="checkout-shell">
         <section id="success" class="panel success hidden">
-            <div class="success-icon">✅</div>
-            <div class="eyebrow">Pedido generado</div>
-            <h1>¡Gracias por elegir Vigilix!</h1>
-            <p>Hemos generado el resumen de tu pedido. Guarda el número para coordinar la disponibilidad y la entrega.
-            </p>
-            <p class="order-id" id="order-id"></p>
-            <div style="max-width:520px;margin:24px auto;text-align:left">
-                <div class="summary-line"><span>Total del pedido</span><strong id="order-total"></strong></div>
-                <div class="summary-line"><span>Método</span><strong>Pago contraentrega</strong></div>
-                <div class="summary-line"><span>Estado</span><strong style="color:var(--amber)">Pendiente de
-                        confirmación</strong></div>
+            <div class="no-print">
+                <div class="success-icon">✅</div>
+                <div class="eyebrow">Pedido registrado</div>
+                <h1>¡Gracias por elegir Vigilix!</h1>
+                <p class="muted" style="max-width:580px;margin:0 auto 14px">Hemos generado tu orden y tu constancia comercial. Puedes descargar tu comprobante o enviarlo directo por WhatsApp.</p>
             </div>
-            <p class="notice"><strong>Siguiente paso:</strong> nuestro equipo validará la disponibilidad y coordinará
-                contigo la fecha de entrega o recojo.</p>
-            <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
-                <a class="button button-primary" style="max-width:320px" href="../index.html">Volver a Vigilix</a>
-                <a class="button button-secondary" href="../index.html#equipos">Seguir comprando</a>
+
+            <div class="receipt-sheet" id="receipt-printable">
+                <div class="receipt-top">
+                    <div class="receipt-brand">
+                        <strong>◆ VIGILIX SECURITY DISTRIBUTION S.A.C.</strong>
+                        <span>RUC: 20601234567 · Lima, Perú</span>
+                        <span>proyectos@vigilix-security.com · +51 (01) 640-9800</span>
+                    </div>
+                    <div class="receipt-doc-box">
+                        <span id="order-doc-title" class="receipt-doc-type">CONSTANCIA DE PEDIDO · BOLETA</span>
+                        <p class="order-id" id="order-id"></p>
+                        <small id="order-date"></small>
+                    </div>
+                </div>
+
+                <div class="receipt-meta-grid">
+                    <div>
+                        <small>CLIENTE / ENTREGA</small>
+                        <strong id="order-shipping-info"></strong>
+                    </div>
+                    <div>
+                        <small>COMPROBANTE SOLICITADO</small>
+                        <strong id="order-invoice-info">Boleta de Venta</strong>
+                    </div>
+                    <div>
+                        <small>MÉTODO DE PAGO</small>
+                        <strong id="order-payment-method"></strong>
+                        <span id="order-payment-detail" class="receipt-sub-detail"></span>
+                    </div>
+                    <div>
+                        <small>ESTADO</small>
+                        <strong id="order-status"></strong>
+                    </div>
+                </div>
+
+                <div class="receipt-table-wrap">
+                    <table class="receipt-table">
+                        <thead>
+                            <tr>
+                                <th>SKU</th>
+                                <th>Descripción</th>
+                                <th class="num">Cant.</th>
+                                <th class="num">P. Unit.</th>
+                                <th class="num">Importe</th>
+                            </tr>
+                        </thead>
+                        <tbody id="order-items-list"></tbody>
+                    </table>
+                </div>
+
+                <div class="receipt-totals">
+                    <div class="summary-line"><span>Op. Gravada (Base)</span><strong id="order-base"></strong></div>
+                    <div class="summary-line"><span>IGV (18% incluido)</span><strong id="order-igv"></strong></div>
+                    <div id="order-discount-line" class="summary-line hidden"><span>Descuento</span><strong id="order-discount" style="color:var(--green)"></strong></div>
+                    <div class="summary-line"><span>Envío</span><strong id="order-shipping-cost"></strong></div>
+                    <div class="summary-line summary-total"><span>Total del pedido</span><strong id="order-total"></strong></div>
+                </div>
+
+                <p class="receipt-footnote">Constancia comercial de pedido online. El comprobante electrónico oficial SUNAT (Boleta o Factura) se emite y envía a tu correo al validar el pago y despacho.</p>
+            </div>
+
+            <p id="order-next-step" class="notice no-print"><strong>Siguiente paso:</strong> nuestro equipo validará la disponibilidad y coordinará contigo la fecha de entrega o recojo.</p>
+
+            <div class="no-print" style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+                <button type="button" id="download-receipt-btn" class="button button-primary" style="max-width:250px">Descargar comprobante</button>
+                <button type="button" id="print-receipt-btn" class="button button-secondary">Imprimir / Guardar PDF</button>
+                <a id="order-whatsapp-btn" class="button button-whatsapp" href="#" target="_blank" rel="noopener">Enviar por WhatsApp</a>
+                <a class="button button-secondary" href="../index.html">Volver a Vigilix</a>
             </div>
         </section>
+
         <section id="missing" class="panel empty hidden">
             <h1>No hay un pedido reciente</h1>
-            <p class="muted">Agrega un producto al carrito para generar un pedido.</p><a class="button button-secondary"
-                href="../index.html#equipos">Ver catálogo</a>
+            <p class="muted">Agrega un producto al carrito para generar un pedido.</p>
+            <a class="button button-secondary" href="../index.html#equipos">Ver catálogo</a>
         </section>
     </main>
-    <script src="../commerce.js?v=20261124-3"></script>
-    <script>const order = VigilixCommerce.getLastOrder(), success = document.getElementById('success'), missing = document.getElementById('missing'); if (order) { success.classList.remove('hidden'); document.getElementById('order-id').textContent = order.id; document.getElementById('order-total').textContent = VigilixCommerce.formatMoney(order.total); } else missing.classList.remove('hidden');</script>
+
+    <script src="../js/productos.js?v=20261124-11"></script>
+    <script src="../js/commerce.js?v=20261124-11"></script>
+    <script src="../js/checkout.js?v=20261124-11"></script>
 </body>
 
 </html>

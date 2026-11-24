@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-labelledby="t d">
+  <title id="t">Kit 4 Cámaras IP 4MP + NVR</title><desc id="d">Kit completo de videovigilancia con grabador NVR y 4 cámaras IP.</desc>
+  <defs><radialGradient id="bg" cx="50%" cy="40%" r="65%"><stop offset="0" stop-color="#1c3454"/><stop offset="1" stop-color="#090e16"/></radialGradient></defs>
+  <rect width="640" height="480" rx="28" fill="url(#bg)"/>
+  <g stroke="#64748b" stroke-width="3">
+    <rect x="95" y="95" width="102" height="58" rx="18" fill="#e2e8f0"/><circle cx="114" cy="124" r="18" fill="#0b111b"/><circle cx="114" cy="124" r="9" fill="#00f2fe"/>
+    <rect x="220" y="95" width="102" height="58" rx="18" fill="#e2e8f0"/><circle cx="239" cy="124" r="18" fill="#0b111b"/><circle cx="239" cy="124" r="9" fill="#00f2fe"/>
+    <rect x="345" y="95" width="102" height="58" rx="18" fill="#e2e8f0"/><circle cx="364" cy="124" r="18" fill="#0b111b"/><circle cx="364" cy="124" r="9" fill="#00f2fe"/>
+    <rect x="470" y="95" width="102" height="58" rx="18" fill="#e2e8f0"/><circle cx="489" cy="124" r="18" fill="#0b111b"/><circle cx="489" cy="124" r="9" fill="#00f2fe"/>
+  </g>
+  <path d="M146 155v55h174m-49-55v55m125-55v55m125-55v55H320v35" fill="none" stroke="#00f2fe" stroke-width="3" stroke-dasharray="6 6"/>
+  <rect x="120" y="255" width="400" height="86" rx="10" fill="#1e293b" stroke="#00f2fe" stroke-width="4"/>
+  <circle cx="155" cy="298" r="8" fill="#10b981"/><circle cx="182" cy="298" r="8" fill="#ff9f43"/>
+  <rect x="220" y="284" width="260" height="28" rx="5" fill="#090e16"/>
+  <text x="350" y="304" fill="#00f2fe" font-family="Arial,sans-serif" font-size="16" font-weight="700" text-anchor="middle">NVR PoE + HDD 2TB</text>
+  <text x="320" y="425" fill="#dbeafe" font-family="Arial,sans-serif" font-size="22" font-weight="700" text-anchor="middle" letter-spacing="3">KIT CCTV PRO 4MP</text>
+</svg>

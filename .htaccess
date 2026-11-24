@@ -1,6 +1,6 @@
 Options -Indexes
 
-<FilesMatch "^(config\.local\.php|config\.local\.php\.example|\.env)$">
+<FilesMatch "^(config\.local\.php|config\.local\.php\.example|\.env|GTM-.*\.json)$">
     Require all denied
 </FilesMatch>
 

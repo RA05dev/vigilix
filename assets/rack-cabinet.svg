@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-labelledby="t d">
+  <title id="t">Gabinete Rack Mural 9U</title><desc id="d">Gabinete rack 9U de telecomunicaciones con puerta de vidrio templado.</desc>
+  <defs><radialGradient id="bg" cx="50%" cy="40%" r="65%"><stop offset="0" stop-color="#1c324d"/><stop offset="1" stop-color="#090e16"/></radialGradient></defs>
+  <rect width="640" height="480" rx="28" fill="url(#bg)"/>
+  <ellipse cx="320" cy="416" rx="150" ry="18" fill="#000" opacity=".45"/>
+  <rect x="175" y="65" width="290" height="330" rx="12" fill="#0f172a" stroke="#64748b" stroke-width="6"/>
+  <rect x="200" y="92" width="240" height="276" rx="6" fill="#08121f" stroke="#00f2fe" stroke-width="3" opacity=".9"/>
+  <g fill="#1e293b" stroke="#334155" stroke-width="2">
+    <rect x="218" y="114" width="204" height="34" rx="4"/><rect x="218" y="162" width="204" height="34" rx="4"/><rect x="218" y="210" width="204" height="34" rx="4"/><rect x="218" y="258" width="204" height="34" rx="4"/><rect x="218" y="306" width="204" height="38" rx="4"/>
+  </g>
+  <g fill="#00f2fe"><circle cx="236" cy="131" r="4"/><circle cx="236" cy="179" r="4"/><circle cx="236" cy="227" r="4"/><circle cx="236" cy="275" r="4"/></g>
+  <g fill="#10b981"><circle cx="250" cy="131" r="4"/><circle cx="250" cy="179" r="4"/><circle cx="250" cy="227" r="4"/><circle cx="250" cy="325" r="4"/></g>
+  <text x="320" y="446" fill="#dbeafe" font-family="Arial,sans-serif" font-size="21" font-weight="700" text-anchor="middle" letter-spacing="3">GABINETE RACK MURAL 9U</text>
+</svg>

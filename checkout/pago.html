@@ -2,56 +2,285 @@
 <html lang="es">
 
 <head>
-    <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-WQHF4V39"></script>
-    <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments) } gtag('js', new Date());</script>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WQHF4V39');</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Revisar pedido | Vigilix</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+    <title>Pago y confirmación | Vigilix</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="checkout.css?v=20261124-4">
+    <link rel="stylesheet" href="checkout.css?v=20261124-11">
 </head>
 
-<body>
+<body data-checkout-page="pago">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WQHF4V39" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
     <header class="site-header">
-        <div class="header-inner"><a class="brand" href="../index.html"><span>◆</span> VIGILIX</a><a class="back-link"
-                href="envio.html">← Editar envío</a></div>
+        <div class="header-inner">
+            <a class="brand" href="../index.html"><span>◆</span> VIGILIX</a>
+            <a class="back-link" href="envio.html">← Editar envío</a>
+        </div>
     </header>
+
     <main class="checkout-shell">
         <div class="eyebrow">Compra online</div>
-        <h1>Revisión y contraentrega</h1>
-        <p class="lead">Verifica el resumen, la entrega y el método de pago antes de generar tu pedido.</p>
+        <h1>Elige tu método de pago</h1>
+        <p class="lead">Haz clic en un método para desplegarlo o vuelve a hacer clic en su título para contraerlo y cambiar rápidamente.</p>
+
         <ol class="steps">
-            <li>1. Carrito</li>
-            <li>2. Envío</li>
-            <li class="active">3. Confirmación</li>
+            <li class="done">1. Carrito</li>
+            <li class="done">2. Envío</li>
+            <li class="active">3. Pago y confirmación</li>
         </ol>
-        <div class="notice"><strong>Pago contraentrega:</strong> paga al recibir el producto. No necesitas ingresar
-            datos bancarios.</div>
+
         <div class="layout">
             <section class="panel">
-                <h2>Método de pago</h2><label class="radio-card"><input type="radio" checked><strong>Pago
-                        contraentrega</strong><small>El pago se realiza al momento de recibir el
-                        producto.</small></label>
-                <h2 style="margin-top:28px">Entrega</h2>
+                <h2>Método de pago</h2>
+
+                <!-- Opción 1: Tarjeta -->
+                <div class="payment-accordion-item" data-method-item="tarjeta">
+                    <div class="radio-card accordion-trigger" data-payment-toggle="tarjeta" role="button" tabindex="0" aria-expanded="true">
+                        <div class="radio-card-head">
+                            <span><input type="radio" name="paymentMethod" value="tarjeta" checked><strong>Tarjeta de Crédito / Débito</strong></span>
+                            <span class="accordion-right">
+                                <span class="method-tags">
+                                    <span class="method-tag">VISA</span>
+                                    <span class="method-tag">MASTERCARD</span>
+                                    <span class="method-tag">AMEX</span>
+                                </span>
+                                <span class="accordion-chevron" aria-hidden="true">▾</span>
+                            </span>
+                        </div>
+                        <small>Aprobación instantánea y comprobante electrónico.</small>
+                    </div>
+
+                    <div class="payment-detail-box" data-payment-panel="tarjeta">
+                        <div class="field">
+                            <label for="card-number">Número de tarjeta</label>
+                            <div class="card-input-wrap">
+                                <input id="card-number" type="text" inputmode="numeric" autocomplete="cc-number" placeholder="4532 0151 1283 0366" maxlength="19">
+                                <span id="card-brand-badge" class="card-brand-badge">TARJETA</span>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label for="card-name">Nombre del titular</label>
+                            <input id="card-name" type="text" autocomplete="cc-name" placeholder="Como figura en la tarjeta">
+                        </div>
+
+                        <div class="field-grid">
+                            <div class="field">
+                                <label for="card-expiry">Vencimiento (MM/AA)</label>
+                                <input id="card-expiry" type="text" inputmode="numeric" autocomplete="cc-exp" placeholder="08/29" maxlength="5">
+                            </div>
+                            <div class="field">
+                                <label for="card-cvv">Código CVV</label>
+                                <input id="card-cvv" type="password" inputmode="numeric" autocomplete="cc-csc" placeholder="123" maxlength="4">
+                            </div>
+                        </div>
+
+                        <div class="security-note">🔒 Protección cifrada SSL. Nunca almacenamos tu número completo ni código CVV.</div>
+                    </div>
+                </div>
+
+                <!-- Opción 2: Yape -->
+                <div class="payment-accordion-item" data-method-item="yape">
+                    <div class="radio-card yape-card accordion-trigger" data-payment-toggle="yape" role="button" tabindex="0" aria-expanded="false">
+                        <div class="radio-card-head">
+                            <span><input type="radio" name="paymentMethod" value="yape"><strong>Yape</strong></span>
+                            <span class="accordion-right">
+                                <span class="method-tags"><span class="method-tag yape">YAPE QR / CELULAR</span></span>
+                                <span class="accordion-chevron" aria-hidden="true">▾</span>
+                            </span>
+                        </div>
+                        <small>Escanea el código QR o yapea al número oficial Vigilix.</small>
+                    </div>
+
+                    <div class="payment-detail-box yape-box hidden" data-payment-panel="yape">
+                        <div class="wallet-grid">
+                            <div class="qr-card">
+                                <svg viewBox="0 0 120 120" role="img" aria-label="Código QR Yape Vigilix">
+                                    <rect width="120" height="120" fill="#ffffff"/>
+                                    <rect x="8" y="8" width="32" height="32" rx="4" fill="#742284"/>
+                                    <rect x="14" y="14" width="20" height="20" rx="2" fill="#fff"/>
+                                    <rect x="19" y="19" width="10" height="10" fill="#742284"/>
+                                    <rect x="80" y="8" width="32" height="32" rx="4" fill="#742284"/>
+                                    <rect x="86" y="14" width="20" height="20" rx="2" fill="#fff"/>
+                                    <rect x="91" y="19" width="10" height="10" fill="#742284"/>
+                                    <rect x="8" y="80" width="32" height="32" rx="4" fill="#742284"/>
+                                    <rect x="14" y="86" width="20" height="20" rx="2" fill="#fff"/>
+                                    <rect x="19" y="91" width="10" height="10" fill="#742284"/>
+                                    <path d="M48 12h8v8h-8zm16 0h8v16h-8zm-16 16h8v16h-8zm16 16h16v8H64zm-48 8h16v8H16zm24 0h8v16h-8zm48 0h24v8H88zm-40 16h16v8H48zm24 0h8v24h-8zm16 8h16v8H88zm-40 16h16v16H48zm32 8h24v8H80zm-16 8h8v8h-8z" fill="#1e1b4b"/>
+                                    <circle cx="60" cy="60" r="10" fill="#00d3b7"/>
+                                    <text x="60" y="64" fill="#ffffff" font-family="Arial,sans-serif" font-size="11" font-weight="800" text-anchor="middle">Y</text>
+                                </svg>
+                                <span style="color:#742284">YAPE VIGILIX</span>
+                            </div>
+
+                            <div class="wallet-meta">
+                                <h3>Paga con Yape</h3>
+                                <p>Titular: <strong style="color:#f8fafc">Vigilix Security Distribution S.A.C.</strong></p>
+                                <div class="wallet-number-row">
+                                    <span class="wallet-number">987 654 321</span>
+                                    <button type="button" class="button button-secondary button-sm" data-copy-text="987654321">Copiar número</button>
+                                </div>
+                                <div class="wallet-amount-pill">Monto exacto a yapear: <strong data-order-total></strong></div>
+                            </div>
+                        </div>
+
+                        <div class="field-grid">
+                            <div class="field">
+                                <label for="yape-phone">Tu celular Yape (9 dígitos)</label>
+                                <input id="yape-phone" type="tel" inputmode="numeric" maxlength="9" placeholder="999888777">
+                            </div>
+                            <div class="field">
+                                <label for="yape-code">Código de aprobación / N° operación</label>
+                                <input id="yape-code" type="text" inputmode="numeric" maxlength="10" placeholder="Ej. 482910">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Opción 3: Plin -->
+                <div class="payment-accordion-item" data-method-item="plin">
+                    <div class="radio-card plin-card accordion-trigger" data-payment-toggle="plin" role="button" tabindex="0" aria-expanded="false">
+                        <div class="radio-card-head">
+                            <span><input type="radio" name="paymentMethod" value="plin"><strong>Plin</strong></span>
+                            <span class="accordion-right">
+                                <span class="method-tags"><span class="method-tag plin">BBVA · INTERBANK · SCOTIABANK</span></span>
+                                <span class="accordion-chevron" aria-hidden="true">▾</span>
+                            </span>
+                        </div>
+                        <small>Transfiere al instante sin comisiones desde tu app bancaria.</small>
+                    </div>
+
+                    <div class="payment-detail-box plin-box hidden" data-payment-panel="plin">
+                        <div class="wallet-grid">
+                            <div class="qr-card">
+                                <svg viewBox="0 0 120 120" role="img" aria-label="Código QR Plin Vigilix">
+                                    <rect width="120" height="120" fill="#ffffff"/>
+                                    <rect x="8" y="8" width="32" height="32" rx="4" fill="#009fb7"/>
+                                    <rect x="14" y="14" width="20" height="20" rx="2" fill="#fff"/>
+                                    <rect x="19" y="19" width="10" height="10" fill="#009fb7"/>
+                                    <rect x="80" y="8" width="32" height="32" rx="4" fill="#009fb7"/>
+                                    <rect x="86" y="14" width="20" height="20" rx="2" fill="#fff"/>
+                                    <rect x="91" y="19" width="10" height="10" fill="#009fb7"/>
+                                    <rect x="8" y="80" width="32" height="32" rx="4" fill="#009fb7"/>
+                                    <rect x="14" y="86" width="20" height="20" rx="2" fill="#fff"/>
+                                    <rect x="19" y="91" width="10" height="10" fill="#009fb7"/>
+                                    <path d="M48 12h16v8H48zm16 12h8v16h-8zm-16 8h8v16h-8zm-32 16h24v8H16zm32 0h8v16h-8zm40 0h24v8H88zm-16 12h8v20h-8zm-24 12h16v8H48zm40 4h16v16H88zm-40 16h24v8H48zm32 8h16v8H80z" fill="#0f172a"/>
+                                    <circle cx="60" cy="60" r="10" fill="#00c8d7"/>
+                                    <text x="60" y="64" fill="#ffffff" font-family="Arial,sans-serif" font-size="11" font-weight="800" text-anchor="middle">P</text>
+                                </svg>
+                                <span style="color:#008fa5">PLIN VIGILIX</span>
+                            </div>
+
+                            <div class="wallet-meta">
+                                <h3>Paga con Plin</h3>
+                                <p>Titular: <strong style="color:#f8fafc">Vigilix Security Distribution S.A.C.</strong></p>
+                                <div class="wallet-number-row">
+                                    <span class="wallet-number">987 654 321</span>
+                                    <button type="button" class="button button-secondary button-sm" data-copy-text="987654321">Copiar número</button>
+                                </div>
+                                <div class="wallet-amount-pill">Monto exacto a plinear: <strong data-order-total></strong></div>
+                            </div>
+                        </div>
+
+                        <div class="field-grid">
+                            <div class="field">
+                                <label for="plin-phone">Tu celular Plin (9 dígitos)</label>
+                                <input id="plin-phone" type="tel" inputmode="numeric" maxlength="9" placeholder="999888777">
+                            </div>
+                            <div class="field">
+                                <label for="plin-code">N° de operación Plin</label>
+                                <input id="plin-code" type="text" maxlength="14" placeholder="Ej. 0094821">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Opción 4: Contraentrega -->
+                <div class="payment-accordion-item" data-method-item="cash-on-delivery">
+                    <div class="radio-card accordion-trigger" data-payment-toggle="cash-on-delivery" role="button" tabindex="0" aria-expanded="false">
+                        <div class="radio-card-head">
+                            <span><input type="radio" name="paymentMethod" value="cash-on-delivery"><strong>Pago contraentrega</strong></span>
+                            <span class="accordion-right">
+                                <span class="method-tags"><span class="method-tag">EFECTIVO / POS</span></span>
+                                <span class="accordion-chevron" aria-hidden="true">▾</span>
+                            </span>
+                        </div>
+                        <small>Paga al momento de recibir tu pedido en Lima o al recoger.</small>
+                    </div>
+
+                    <div class="payment-detail-box hidden" data-payment-panel="cash-on-delivery">
+                        <p class="muted" style="margin-top:0">Selecciona cómo prefieres pagar al momento de la entrega:</p>
+                        <label class="radio-card" style="margin-bottom:8px">
+                            <input type="radio" name="codMode" value="efectivo" checked>
+                            <strong>Efectivo al recibir</strong>
+                        </label>
+                        <label class="radio-card" style="margin-bottom:0">
+                            <input type="radio" name="codMode" value="pos">
+                            <strong>POS inalámbrico (Tarjeta al recibir)</strong>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Comprobante de pago para TODOS los métodos -->
+                <div class="invoice-section">
+                    <h2>Comprobante de pago</h2>
+                    <div class="invoice-toggle-row">
+                        <label class="invoice-pill">
+                            <input type="radio" name="invoiceType" value="boleta" checked>
+                            <span>Boleta de Venta</span>
+                        </label>
+                        <label class="invoice-pill">
+                            <input type="radio" name="invoiceType" value="factura">
+                            <span>Factura (Empresas / RUC)</span>
+                        </label>
+                    </div>
+
+                    <div id="boleta-fields" class="field">
+                        <label for="invoice-dni">DNI (opcional para boleta)</label>
+                        <input id="invoice-dni" type="text" inputmode="numeric" maxlength="8" placeholder="Ej. 71234567">
+                    </div>
+
+                    <div id="factura-fields" class="field-grid hidden">
+                        <div class="field">
+                            <label for="invoice-ruc">RUC (11 dígitos) *</label>
+                            <input id="invoice-ruc" type="text" inputmode="numeric" maxlength="11" placeholder="20601234567">
+                        </div>
+                        <div class="field">
+                            <label for="invoice-business">Razón Social *</label>
+                            <input id="invoice-business" type="text" placeholder="Ej. Integradores Seguros S.A.C.">
+                        </div>
+                    </div>
+                </div>
+
+                <h2 style="margin-top:24px">Datos de entrega</h2>
                 <div id="shipping-summary" class="muted"></div>
             </section>
+
             <aside class="panel">
                 <h2>Tu pedido</h2>
                 <div id="summary-items"></div>
                 <div class="summary-line"><span>Subtotal</span><strong id="subtotal"></strong></div>
+                <div id="summary-discount-row" class="summary-line hidden">
+                    <span>Descuento</span>
+                    <strong id="summary-discount" style="color:var(--green)"></strong>
+                </div>
                 <div class="summary-line"><span>Envío</span><strong id="shipping-cost"></strong></div>
-                <div class="summary-line summary-total"><span>Total</span><strong id="total"></strong></div><button
-                    id="finish" class="button button-primary" type="button">Generar pedido</button>
+                <div class="summary-line summary-total"><span>Total a pagar</span><strong id="total"></strong></div>
+
+                <button id="finish" class="button button-primary" type="button">Pagar con tarjeta ahora</button>
                 <p id="error" class="error" role="alert"></p>
             </aside>
         </div>
     </main>
-    <script src="../commerce.js?v=20261124-3"></script>
-    <script>
-        const commerce = window.VigilixCommerce, shipping = commerce.getShipping(); if (!commerce.count()) location.replace('../carrito.html'); if (!shipping) location.replace('envio.html'); const cost = commerce.shippingCost(shipping.deliveryMethod); document.getElementById('summary-items').innerHTML = commerce.getDetailedCart().map(item => `<div class="summary-line"><span>${item.quantity} × ${item.name}</span><strong>${commerce.formatMoney(item.subtotal)}</strong></div>`).join(''); document.getElementById('subtotal').textContent = commerce.formatMoney(commerce.subtotal()); document.getElementById('shipping-cost').textContent = cost ? commerce.formatMoney(cost) : 'Gratis'; document.getElementById('total').textContent = commerce.formatMoney(commerce.subtotal() + cost); const delivery = shipping.deliveryMethod === 'delivery-lima' ? `${shipping.address}, ${shipping.district}${shipping.reference ? ` — Ref.: ${shipping.reference}` : ''}` : 'Recojo coordinado'; document.getElementById('shipping-summary').innerHTML = `<strong style="color:#f8fafc">${shipping.name}</strong><br>${delivery}<br>${shipping.phone} · ${shipping.email}`; commerce.trackCartEvent('add_payment_info', { payment_type: 'cash-on-delivery' }); document.getElementById('finish').addEventListener('click', () => { try { document.getElementById('finish').disabled = true; commerce.makeOrder(); location.href = 'gracias.html'; } catch (error) { document.getElementById('error').textContent = error.message; document.getElementById('finish').disabled = false; } });
-    </script>
+
+    <script src="../js/productos.js?v=20261124-11"></script>
+    <script src="../js/commerce.js?v=20261124-11"></script>
+    <script src="../js/checkout.js?v=20261124-11"></script>
 </body>
 
 </html>

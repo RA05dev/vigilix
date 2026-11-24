@@ -2,42 +2,58 @@
 <html lang="es">
 
 <head>
-
-    <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-WQHF4V39"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),
+        event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WQHF4V39');
     </script>
-
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
     <meta name="description"
         content="Vigilix distribuye equipos de seguridad electrónica para compra online y desarrolla proyectos B2B de videovigilancia, incendios, acceso y redes en Perú.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_PE">
+    <meta property="og:title" content="Vigilix | Seguridad Electrónica B2B y Tienda Online">
+    <meta property="og:description"
+        content="30+ soluciones en videovigilancia IP, detección de incendios UL/NFPA, control de acceso biométrico y redes PoE. Paga con Tarjeta, Yape, Plin o contraentrega.">
     <title>Vigilix | Seguridad Electrónica B2B y Tienda Online</title>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Store",
+      "name": "Vigilix Security Distribution",
+      "description": "Distribución B2B y tienda online de seguridad electrónica en Perú: CCTV IP, detección de incendios UL/NFPA, control de acceso biométrico, redes PoE y licencias VMS.",
+      "priceRange": "S/ 59.90 - S/ 1,450.00",
+      "currenciesAccepted": "PEN",
+      "paymentAccepted": "Credit Card, Debit Card, Yape, Plin, Cash on Delivery",
+      "areaServed": "PE"
+    }
+    </script>
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Rajdhani:wght@500;600;700&display=swap"
         rel="stylesheet">
-
-    <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <link rel="stylesheet" href="index.css?v=20261124-7">
+    <link rel="stylesheet" href="css/base.css?v=20261124-10">
+    <link rel="stylesheet" href="css/home.css?v=20261124-10">
 </head>
 
 <body class="home-page">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WQHF4V39" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-    <!-- 1. BARRA DE NAVEGACIÓN FUNCIONAL -->
+    <!-- 1. BARRA DE NAVEGACIÓN -->
     <header>
         <div class="container header-content">
             <a href="#" class="logo">
                 <i class="fa-solid fa-shield-halved"></i> VIGILIX
             </a>
+
+            <button type="button" class="mobile-menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
 
             <nav class="nav-menu">
                 <a href="#soluciones">Soluciones</a>
@@ -50,7 +66,7 @@
             <div class="header-tools">
                 <div class="search-box">
                     <i class="fa-solid fa-search"></i>
-                    <input type="text" id="search-input" placeholder="Buscar SKU, Hikvision, Simplex...">
+                    <input type="text" id="search-input" placeholder="Buscar SKU, Hikvision, ZKTeco, Simplex...">
                 </div>
                 <a href="carrito.html" class="cart-wrapper desktop-cart" title="Ir al Carrito">
                     <i class="fa-solid fa-cart-shopping"></i>
@@ -71,18 +87,24 @@
             <div class="hero-content">
                 <span class="badge-tech"><i class="fa-solid fa-microchip"></i> DISTRIBUCIÓN B2B + COMPRA ONLINE</span>
                 <h1>Seguridad electrónica para <span>empresas, integradores y hogares</span></h1>
-                <p>Compra productos estandarizados directamente en línea o solicita atención B2B para proyectos,
-                    volumen, licencias, ingeniería y puesta en marcha.</p>
+                <p>Compra equipos y licencias directamente en línea con Tarjeta, Yape, Plin o contraentrega, o solicita
+                    atención B2B para proyectos, volumen e ingeniería.</p>
                 <div class="hero-actions">
-                    <a href="#cotizar" class="btn-primary">
-                        <i class="fa-solid fa-file-invoice"></i> Solicitar Cotización
-                    </a>
-                    <a href="#equipos" class="btn-outline">
+                    <a href="#equipos" class="btn-primary">
                         <i class="fa-solid fa-boxes-stacked"></i> Ver Catálogo
                     </a>
-                    <a href="#destacados" class="btn-outline">
-                        <i class="fa-solid fa-star"></i> Ver destacados
+                    <a href="#cotizar" class="btn-outline">
+                        <i class="fa-solid fa-file-invoice"></i> Solicitar Cotización
                     </a>
+                    <a href="#destacados" class="btn-outline">
+                        <i class="fa-solid fa-star"></i> Destacados
+                    </a>
+                </div>
+                <div class="payment-badges" aria-label="Medios de pago aceptados">
+                    <span class="pay-pill"><i class="fa-regular fa-credit-card"></i> Visa / Mastercard</span>
+                    <span class="pay-pill yape"><i class="fa-solid fa-qrcode"></i> Yape</span>
+                    <span class="pay-pill plin"><i class="fa-solid fa-qrcode"></i> Plin</span>
+                    <span class="pay-pill"><i class="fa-solid fa-truck-fast"></i> Envío gratis desde S/ 500</span>
                 </div>
             </div>
 
@@ -91,15 +113,15 @@
                     alt="Centro de Datos y Monitoreo Vigilix">
                 <div class="hero-hud-overlay">
                     <div class="hud-stat">
-                        <span>Disponibilidad Stock</span>
-                        <strong>99.4% Sincronizado</strong>
+                        <span>Catálogo Activo</span>
+                        <strong>30 Soluciones</strong>
                     </div>
                     <div class="hud-stat">
                         <span>Certificación</span>
                         <strong>UL / NFPA / ONVIF</strong>
                     </div>
                     <div class="hud-stat">
-                        <span>Despacho B2B</span>
+                        <span>Despacho Lima</span>
                         <strong>24 Horas</strong>
                     </div>
                 </div>
@@ -111,17 +133,17 @@
     <section class="trust-bar">
         <div class="container trust-grid">
             <div class="trust-item">
-                <i class="fa-solid fa-headset"></i>
+                <i class="fa-solid fa-credit-card"></i>
                 <div class="trust-info">
-                    <h4>Compra Online</h4>
-                    <p>Productos con precio y carrito inmediato.</p>
+                    <h4>Múltiples Pagos</h4>
+                    <p>Tarjeta, Yape, Plin y contraentrega.</p>
                 </div>
             </div>
             <div class="trust-item">
                 <i class="fa-solid fa-truck-fast"></i>
                 <div class="trust-info">
-                    <h4>Atención B2B</h4>
-                    <p>Proyectos, volumen y licitaciones.</p>
+                    <h4>Envío a Todo el Perú</h4>
+                    <p>Lima 24h (gratis desde S/ 500) y provincias.</p>
                 </div>
             </div>
             <div class="trust-item">
@@ -134,24 +156,40 @@
             <div class="trust-item">
                 <i class="fa-solid fa-server"></i>
                 <div class="trust-info">
-                    <h4>Logística de Proyecto</h4>
-                    <p>Entrega coordinada a obra o almacén.</p>
+                    <h4>Atención B2B</h4>
+                    <p>Proyectos, volumen y licitaciones.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- BANDA DE MARCAS AUTORIZADAS -->
+    <section class="brands-bar" aria-label="Marcas distribuidas">
+        <div class="container brands-bar-inner">
+            <span class="brands-label"><i class="fa-solid fa-shield-check"></i> Ecosistema de marcas líderes</span>
+            <div class="brands-row">
+                <span class="brand-item">HIKVISION</span>
+                <span class="brand-item">SIMPLEX</span>
+                <span class="brand-item">HONEYWELL</span>
+                <span class="brand-item">NOTIFIER</span>
+                <span class="brand-item">ZKTECO</span>
+                <span class="brand-item">WESTERN DIGITAL</span>
+                <span class="brand-item">UBIQUITI</span>
+                <span class="brand-item">APC / VERTIV</span>
+            </div>
+        </div>
+    </section>
+
     <!-- SECCIÓN 1: SOLUCIONES -->
-    <section id="soluciones" class="categories-section ">
+    <section id="soluciones" class="categories-section">
         <div class="container">
             <div class="section-header">
                 <h2><i class="fa-solid fa-layer-group"></i> Soluciones</h2>
-                <p>Arquitecturas completas de protección electrónica diseñadas para bancos, minería, retail, hospitales
-                    y edificios corporativos.</p>
+                <p>Arquitecturas completas de protección electrónica diseñadas para bancos, minería, retail, hospitales,
+                    edificios corporativos y hogares.</p>
             </div>
 
             <div class="cat-grid">
-                <!-- Solución 1 -->
                 <a href="#equipos" class="cat-card" onclick="filterProducts('cctv')">
                     <img class="cat-card-bg"
                         src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=700&q=80"
@@ -159,12 +197,11 @@
                     <div class="cat-card-content">
                         <div class="cat-icon-badge"><i class="fa-solid fa-video"></i></div>
                         <h3>Videovigilancia IP & NVR</h3>
-                        <p>Cámaras Bullet/PTZ con AcuSense, térmicas, LPR y grabadores NVR de ultra alta definición.</p>
+                        <p>Cámaras Bullet, Domo ColorVu, PTZ AcuSense, kits completos y grabadores NVR 4K PoE.</p>
                         <span class="cat-link">Explorar Equipos <i class="fa-solid fa-arrow-right"></i></span>
                     </div>
                 </a>
 
-                <!-- Solución 2 -->
                 <a href="#equipos" class="cat-card" onclick="filterProducts('incendio')">
                     <img class="cat-card-bg"
                         src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=700&q=80"
@@ -172,13 +209,12 @@
                     <div class="cat-card-content">
                         <div class="cat-icon-badge"><i class="fa-solid fa-fire-extinguisher"></i></div>
                         <h3>Detección de Incendios</h3>
-                        <p>Paneles direccionables inteligentes, sensores fotoeléctricos, estaciones manuales y sirenas
-                            estroboscópicas.</p>
+                        <p>Paneles direccionables, detectores fotoeléctricos, estaciones manuales y
+                            sirenas estroboscópicas.</p>
                         <span class="cat-link">Explorar Equipos <i class="fa-solid fa-arrow-right"></i></span>
                     </div>
                 </a>
 
-                <!-- Solución 3 -->
                 <a href="#equipos" class="cat-card" onclick="filterProducts('acceso')">
                     <img class="cat-card-bg"
                         src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=700&q=80"
@@ -186,13 +222,11 @@
                     <div class="cat-card-content">
                         <div class="cat-icon-badge"><i class="fa-solid fa-fingerprint"></i></div>
                         <h3>Control de Acceso Biométrico</h3>
-                        <p>Terminales de reconocimiento facial MinMoe, controladoras IP multipuerta, cerraduras
-                            electromagnéticas y molinetes.</p>
+                        <p>Terminales faciales Hikvision MinMoe y ZKTeco SpeedFace, electroimanes y botones sin contacto.</p>
                         <span class="cat-link">Explorar Equipos <i class="fa-solid fa-arrow-right"></i></span>
                     </div>
                 </a>
 
-                <!-- Solución 4 -->
                 <a href="#equipos" class="cat-card" onclick="filterProducts('redes')">
                     <img class="cat-card-bg"
                         src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=700&q=80"
@@ -200,8 +234,8 @@
                     <div class="cat-card-content">
                         <div class="cat-icon-badge"><i class="fa-solid fa-network-wired"></i></div>
                         <h3>Redes & Energía PoE</h3>
-                        <p>Switches gestionables PoE+ de largo alcance, fibra óptica, gabinetes rack, UPS online y
-                            discos de videovigilancia.</p>
+                        <p>Switches gestionables PoE+, gabinetes rack murales, cableado Cat6 LSZH, UPS online y discos
+                            WD Purple.</p>
                         <span class="cat-link">Explorar Equipos <i class="fa-solid fa-arrow-right"></i></span>
                     </div>
                 </a>
@@ -219,51 +253,7 @@
                 </div>
                 <a href="#equipos" class="btn-outline">Ver catálogo completo <i class="fa-solid fa-arrow-right"></i></a>
             </div>
-            <div class="featured-grid">
-                <article class="featured-card"><a href="producto.html?sku=VGX-A9-TUYA"><img src="assets/a9-camera.svg"
-                            alt="Mini Cámara Wi-Fi A9"></a>
-                    <div><span>Residencial</span>
-                        <h3><a href="producto.html?sku=VGX-A9-TUYA">Mini Cámara Wi‑Fi Magnética A9</a></h3><strong>S/
-                            59.90</strong>
-                        <div class="featured-actions"><a href="producto.html?sku=VGX-A9-TUYA">Ver detalles</a><button
-                                onclick="addProductToCart('VGX-A9-TUYA')"><i class="fa-solid fa-cart-plus"></i></button>
-                        </div>
-                    </div>
-                </article>
-                <article class="featured-card"><a href="producto.html?sku=HKV-7732NI-K4"><img
-                            src="https://assets.hikvision.com/prd/normal/all/image/m000000603/MB-202Y-P-HIKVISION.png"
-                            alt="NVR Hikvision 32 canales"></a>
-                    <div><span>Videovigilancia IP</span>
-                        <h3><a href="producto.html?sku=HKV-7732NI-K4">NVR Hikvision 32 Canales / 16 PoE</a></h3>
-                        <strong>S/ 650.00</strong>
-                        <div class="featured-actions"><a href="producto.html?sku=HKV-7732NI-K4">Ver detalles</a><button
-                                onclick="addProductToCart('HKV-7732NI-K4')"><i
-                                    class="fa-solid fa-cart-plus"></i></button></div>
-                    </div>
-                </article>
-                <article class="featured-card"><a href="producto.html?sku=SMP-4007ES-HYB"><img
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_UsgTMuZECKRhTvej78eWqLyGc1swAM_NRDuuwPqqQqcWkK6XRrrnFOA&s=10"
-                            alt="Panel Simplex 4007ES"></a>
-                    <div><span>Detección de incendios</span>
-                        <h3><a href="producto.html?sku=SMP-4007ES-HYB">Panel Simplex 4007ES</a></h3><strong>S/
-                            1,240.00</strong>
-                        <div class="featured-actions"><a href="producto.html?sku=SMP-4007ES-HYB">Ver detalles</a><button
-                                onclick="addProductToCart('SMP-4007ES-HYB')"><i
-                                    class="fa-solid fa-cart-plus"></i></button></div>
-                    </div>
-                </article>
-                <article class="featured-card"><a href="producto.html?sku=HKV-K1T671M"><img
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEcwZbg44_rZ1yMgXa4TovryMFl-VK512ih0I3dj1omKfKEvcgT95wOKw6&s=10"
-                            alt="Terminal facial Hikvision"></a>
-                    <div><span>Control de acceso</span>
-                        <h3><a href="producto.html?sku=HKV-K1T671M">Terminal Facial y Huella Hikvision</a></h3>
-                        <strong>S/ 345.00</strong>
-                        <div class="featured-actions"><a href="producto.html?sku=HKV-K1T671M">Ver detalles</a><button
-                                onclick="addProductToCart('HKV-K1T671M')"><i class="fa-solid fa-cart-plus"></i></button>
-                        </div>
-                    </div>
-                </article>
-            </div>
+            <div class="featured-grid"></div>
         </div>
     </section>
 
@@ -281,356 +271,41 @@
                     <span style="font-size: 0.9rem; color: var(--text-secondary);">Importación directa disponible para
                         entrega inmediata</span>
                 </div>
-
-                <div class="arrivals-mini-grid">
-                    <div class="arrival-item">
-                        <img src="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=300&q=80"
-                            alt="NVR Hikvision">
-                        <div class="arrival-info">
-                            <span class="tag-new">Nuevo Ingreso</span>
-                            <h4>NVR Hikvision DS-7732NI-K4/16P</h4>
-                            <div class="arrival-price">S/ 650.00</div>
-                        </div>
-                    </div>
-
-                    <div class="arrival-item">
-                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=300&q=80"
-                            alt="Panel Simplex 4007ES">
-                        <div class="arrival-info">
-                            <span class="tag-new">UL / NFPA 72</span>
-                            <h4>Panel Incendio Simplex 4007ES</h4>
-                            <div class="arrival-price">S/ 1,240.00</div>
-                        </div>
-                    </div>
-
-                    <div class="arrival-item">
-                        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=300&q=80"
-                            alt="Panel Honeywell Fire-Lite">
-                        <div class="arrival-info">
-                            <span class="tag-new">Top Ventas B2B</span>
-                            <h4>Panel Honeywell Fire-Lite ES-50X</h4>
-                            <div class="arrival-price">S/ 890.00</div>
-                        </div>
-                    </div>
-                </div>
+                <div class="arrivals-mini-grid"></div>
             </div>
 
             <!-- Cabecera del Catálogo General -->
-            <div class="section-header-row">
-                <div class="section-header" style="margin-bottom: 0;">
-                    <h2><i class="fa-solid fa-microchip"></i> Catálogo General de Productos</h2>
-                    <p>Compra equipos y periféricos directamente o solicita condiciones B2B para volumen y proyectos.
-                    </p>
-                </div>
+            <div class="section-header" style="margin-bottom: 1.5rem;">
+                <h2><i class="fa-solid fa-microchip"></i> Catálogo General de Productos</h2>
+                <p>Compra equipos y periféricos directamente o solicita condiciones B2B para volumen y proyectos.</p>
+            </div>
 
+            <div class="catalog-toolbar">
                 <div class="filter-tabs">
-                    <button class="filter-btn active" onclick="filterProducts('todos', this)">Todos</button>
-                    <button class="filter-btn" onclick="filterProducts('residencial', this)">Residencial</button>
-                    <button class="filter-btn" onclick="filterProducts('cctv', this)">CCTV & NVR</button>
-                    <button class="filter-btn" onclick="filterProducts('incendio', this)">Incendios</button>
-                    <button class="filter-btn" onclick="filterProducts('acceso', this)">Acceso Biométrico</button>
-                    <button class="filter-btn" onclick="filterProducts('redes', this)">Redes & Energía</button>
+                    <button type="button" class="filter-btn active" data-filter="todos" onclick="filterProducts('todos', this)">Todos</button>
+                    <button type="button" class="filter-btn" data-filter="residencial" onclick="filterProducts('residencial', this)">Residencial</button>
+                    <button type="button" class="filter-btn" data-filter="cctv" onclick="filterProducts('cctv', this)">CCTV & NVR</button>
+                    <button type="button" class="filter-btn" data-filter="incendio" onclick="filterProducts('incendio', this)">Incendios</button>
+                    <button type="button" class="filter-btn" data-filter="acceso" onclick="filterProducts('acceso', this)">Acceso Biométrico</button>
+                    <button type="button" class="filter-btn" data-filter="redes" onclick="filterProducts('redes', this)">Redes & Energía</button>
+                </div>
+
+                <div class="catalog-meta-controls">
+                    <button type="button" class="btn-kit-cta" onclick="VigilixTools.openKitBuilder()">
+                        <i class="fa-solid fa-cubes"></i> Arma tu Kit CCTV
+                    </button>
+                    <span class="results-count" id="catalog-results-count"></span>
+                    <select id="catalog-sort" class="catalog-sort" aria-label="Ordenar productos" onchange="sortProducts(this.value)">
+                        <option value="featured">Ordenar: Destacados</option>
+                        <option value="price-asc">Precio: menor a mayor</option>
+                        <option value="price-desc">Precio: mayor a menor</option>
+                        <option value="name-asc">Nombre: A - Z</option>
+                    </select>
                 </div>
             </div>
 
-            <!-- Grid Principal de Equipos -->
-            <div class="prod-grid" id="main-catalog">
-                <!-- Producto residencial: Mini Cámara A9 -->
-                <article class="product-card" data-category="residencial">
-                    <div class="prod-image">
-                        <a href="producto.html?sku=VGX-A9-TUYA"><img src="assets/a9-camera.svg"
-                                alt="Mini Cámara de Seguridad Wi‑Fi Magnética A9"></a>
-                        <span class="stock-badge"><i class="fa-solid fa-check"></i> Disponible</span>
-                        <span class="brand-pill">VIGILIX HOME</span>
-                    </div>
-                    <div class="prod-details">
-                        <span class="prod-sku">SKU: VGX-A9-TUYA</span>
-                        <h3 class="prod-title"><a href="producto.html?sku=VGX-A9-TUYA">Mini Cámara de Seguridad Wi‑Fi
-                                Magnética A9</a></h3>
-                        <ul class="prod-features">
-                            <li><i class="fa-solid fa-check"></i> Monitoreo desde el celular mediante Wi‑Fi</li>
-                            <li><i class="fa-solid fa-check"></i> Base magnética para instalación flexible</li>
-                            <li><i class="fa-solid fa-check"></i> Ideal para interiores, hogar y pequeños negocios</li>
-                        </ul>
-                        <div class="prod-footer">
-                            <span class="prod-price">S/ 59.90</span>
-                            <div class="catalog-actions">
-                                <a class="btn-detail" href="producto.html?sku=VGX-A9-TUYA">Ver detalles</a>
-                                <button class="btn-add" onclick="addProductToCart('VGX-A9-TUYA')"><i
-                                        class="fa-solid fa-cart-plus"></i> Agregar</button>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Producto 1: Hikvision NVR -->
-                <article class="product-card" data-category="cctv">
-                    <div class="prod-image">
-                        <img src="https://assets.hikvision.com/prd/normal/all/image/m000000603/MB-202Y-P-HIKVISION.png"
-                            alt="NVR Hikvision DS-7732NI-K4/16P">
-                        <span class="stock-badge"><i class="fa-solid fa-check"></i> En Stock (14 uds)</span>
-                        <span class="brand-pill">HIKVISION</span>
-                    </div>
-                    <div class="prod-details">
-                        <span class="prod-sku">SKU: HKV-7732NI-K4</span>
-                        <h3 class="prod-title"><a href="producto.html?sku=HKV-7732NI-K4">NVR Hikvision DS-7732NI-K4/16P
-                                (32 Canales IP, 16 PoE)</a></h3>
-                        <ul class="prod-features">
-                            <li><i class="fa-solid fa-check"></i> Resolución de grabación hasta 12MP (4K)</li>
-                            <li><i class="fa-solid fa-check"></i> 16 puertos PoE IEEE 802.3af/at integrados</li>
-                            <li><i class="fa-solid fa-check"></i> 4 bahías SATA (hasta 10TB c/u) + Salida HDMI dual</li>
-                        </ul>
-                        <div class="prod-footer">
-                            <span class="prod-price">S/ 650.00</span>
-                            <div class="catalog-actions"><a class="btn-detail"
-                                    href="producto.html?sku=HKV-7732NI-K4">Ver detalles</a><button class="btn-add"
-                                    onclick="addProductToCart('HKV-7732NI-K4')"><i class="fa-solid fa-cart-plus"></i>
-                                    Agregar</button></div>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Producto adicional: Cámara Bullet -->
-                <article class="product-card" data-category="cctv">
-                    <div class="prod-image"><img src="assets/camera-bullet.svg"
-                            alt="Cámara Bullet IP 4MP AcuSense"><span class="stock-badge"><i
-                                class="fa-solid fa-check"></i> Disponible</span><span
-                            class="brand-pill">HIKVISION</span></div>
-                    <div class="prod-details"><span class="prod-sku">SKU: HKV-BULLET-4MP</span>
-                        <h3 class="prod-title"><a href="producto.html?sku=HKV-BULLET-4MP">Cámara Bullet IP 4MP IR
-                                AcuSense</a></h3>
-                        <ul class="prod-features">
-                            <li><i class="fa-solid fa-check"></i> Resolución 4MP para video nítido</li>
-                            <li><i class="fa-solid fa-check"></i> Analítica de personas y vehículos</li>
-                            <li><i class="fa-solid fa-check"></i> Protección para instalación exterior</li>
-                        </ul>
-                        <div class="prod-footer"><span class="prod-price">S/ 290.00</span>
-                            <div class="catalog-actions"><a class="btn-detail"
-                                    href="producto.html?sku=HKV-BULLET-4MP">Ver detalles</a><button class="btn-add"
-                                    onclick="addProductToCart('HKV-BULLET-4MP')"><i class="fa-solid fa-cart-plus"></i>
-                                    Agregar</button></div>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Producto 2: Panel Simplex -->
-                <article class="product-card" data-category="incendio">
-                    <div class="prod-image">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_UsgTMuZECKRhTvej78eWqLyGc1swAM_NRDuuwPqqQqcWkK6XRrrnFOA&s=10auto=format&fit=crop&w=600&q=80"
-                            alt="Panel de Alarma Simplex 4007ES">
-                        <span class="stock-badge"><i class="fa-solid fa-check"></i> En Stock (6 uds)</span>
-                        <span class="brand-pill">SIMPLEX</span>
-                    </div>
-                    <div class="prod-details">
-                        <span class="prod-sku">SKU: SMP-4007ES-HYB</span>
-                        <h3 class="prod-title"><a href="producto.html?sku=SMP-4007ES-HYB">Panel de Detección Contra
-                                Incendio Simplex 4007ES</a></h3>
-                        <ul class="prod-features">
-                            <li><i class="fa-solid fa-check"></i> Capacidad expandible hasta 250 puntos IDNet+</li>
-                            <li><i class="fa-solid fa-check"></i> Pantalla táctil a color de 4.3" de fácil operación
-                            </li>
-                            <li><i class="fa-solid fa-check"></i> 4 circuitos NAC Clase A/B de 6A totales</li>
-                        </ul>
-                        <div class="prod-footer">
-                            <span class="prod-price">S/ 1,240.00</span>
-                            <div class="catalog-actions"><a class="btn-detail"
-                                    href="producto.html?sku=SMP-4007ES-HYB">Ver detalles</a><button class="btn-add"
-                                    onclick="addProductToCart('SMP-4007ES-HYB')"><i class="fa-solid fa-cart-plus"></i>
-                                    Agregar</button></div>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Producto 3: Panel Honeywell -->
-                <article class="product-card" data-category="incendio">
-                    <div class="prod-image">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvbtFUKK5K2234jHR8rZ2BtLofrzcdCIwUUvlPnyzM0DjzGlREkfSF9KI&s=10auto=format&fit=crop&w=600&q=80"
-                            alt="Panel Contra Incendios Honeywell ES-50X">
-                        <span class="stock-badge"><i class="fa-solid fa-check"></i> En Stock (9 uds)</span>
-                        <span class="brand-pill">HONEYWELL FIRE-LITE</span>
-                    </div>
-                    <div class="prod-details">
-                        <span class="prod-sku">SKU: HON-ES50X</span>
-                        <h3 class="prod-title"><a href="producto.html?sku=HON-ES50X">Panel Contra Incendios
-                                Direccionable Honeywell ES-50X</a></h3>
-                        <ul class="prod-features">
-                            <li><i class="fa-solid fa-check"></i> Soporta 50 dispositivos direccionables SLC</li>
-                            <li><i class="fa-solid fa-check"></i> Comunicador dual IP y línea telefónica POTs</li>
-                            <li><i class="fa-solid fa-check"></i> Programación rápida vía USB y teclado frontal</li>
-                        </ul>
-                        <div class="prod-footer">
-                            <span class="prod-price">S/ 890.00</span>
-                            <div class="catalog-actions"><a class="btn-detail" href="producto.html?sku=HON-ES50X">Ver
-                                    detalles</a><button class="btn-add" onclick="addProductToCart('HON-ES50X')"><i
-                                        class="fa-solid fa-cart-plus"></i> Agregar</button></div>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Producto 4: Cámara PTZ AcuSense -->
-                <article class="product-card" data-category="cctv">
-                    <div class="prod-image">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8hW-IW3ceJwrx6XHav7Jojji8SwswsZbFc7oAiCx2p1b7No6F2QsMjafk&s=10auto=format&fit=crop&w=600&q=80"
-                            alt="Domo PTZ Hikvision DarkFighter">
-                        <span class="stock-badge"><i class="fa-solid fa-check"></i> En Stock (22 uds)</span>
-                        <span class="brand-pill">HIKVISION PRO</span>
-                    </div>
-                    <div class="prod-details">
-                        <span class="prod-sku">SKU: HKV-DS2DE7A432</span>
-                        <h3 class="prod-title"><a href="producto.html?sku=HKV-DS2DE7A432">Domo PTZ IP 4MP Zoom Óptico
-                                32X IR 200m AcuSense</a></h3>
-                        <ul class="prod-features">
-                            <li><i class="fa-solid fa-check"></i> Tecnología DarkFighter ultra baja iluminación</li>
-                            <li><i class="fa-solid fa-check"></i> Auto-tracking inteligente de humanos y vehículos</li>
-                            <li><i class="fa-solid fa-check"></i> Protección antivandálica IK10 e intemperie IP67</li>
-                        </ul>
-                        <div class="prod-footer">
-                            <span class="prod-price">S/ 540.00</span>
-                            <div class="catalog-actions"><a class="btn-detail"
-                                    href="producto.html?sku=HKV-DS2DE7A432">Ver detalles</a><button class="btn-add"
-                                    onclick="addProductToCart('HKV-DS2DE7A432')"><i class="fa-solid fa-cart-plus"></i>
-                                    Agregar</button></div>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Producto 5: Terminal Biométrico Facial -->
-                <article class="product-card" data-category="acceso">
-                    <div class="prod-image">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEcwZbg44_rZ1yMgXa4TovryMFl-VK512ih0I3dj1omKfKEvcgT95wOKw6&s=10auto=format&fit=crop&w=600&q=80"
-                            alt="Terminal Biométrico Facial MinMoe">
-                        <span class="stock-badge"><i class="fa-solid fa-check"></i> En Stock (18 uds)</span>
-                        <span class="brand-pill">HIKVISION MINMOE</span>
-                    </div>
-                    <div class="prod-details">
-                        <span class="prod-sku">SKU: HKV-K1T671M</span>
-                        <h3 class="prod-title"><a href="producto.html?sku=HKV-K1T671M">Terminal de Control de Acceso
-                                Facial y Huella DS-K1T671M</a></h3>
-                        <ul class="prod-features">
-                            <li><i class="fa-solid fa-check"></i> Pantalla táctil LCD de 7" con lente gran angular</li>
-                            <li><i class="fa-solid fa-check"></i> Capacidad de 6,000 rostros y 5,000 huellas</li>
-                            <li><i class="fa-solid fa-check"></i> Detección de rostro vivo anti-suplantación</li>
-                        </ul>
-                        <div class="prod-footer">
-                            <span class="prod-price">S/ 345.00</span>
-                            <div class="catalog-actions"><a class="btn-detail" href="producto.html?sku=HKV-K1T671M">Ver
-                                    detalles</a><button class="btn-add" onclick="addProductToCart('HKV-K1T671M')"><i
-                                        class="fa-solid fa-cart-plus"></i> Agregar</button></div>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Producto 6: UPS Online Rackeable -->
-                <article class="product-card" data-category="redes">
-                    <div class="prod-image">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtoRVa4BMDHcnwf_cBG8bXoEk4pm85XBcp6YDwLnqkxw&s=10auto=format&fit=crop&w=600&q=80"
-                            alt="UPS Online Doble Conversión 3KVA">
-                        <span class="stock-badge"><i class="fa-solid fa-check"></i> En Stock (11 uds)</span>
-                        <span class="brand-pill">APC / VERTIV</span>
-                    </div>
-                    <div class="prod-details">
-                        <span class="prod-sku">SKU: PWR-UPS3KVA-RT</span>
-                        <h3 class="prod-title"><a href="producto.html?sku=PWR-UPS3KVA-RT">UPS Online Doble Conversión
-                                3KVA / 2700W Rack 2U</a></h3>
-                        <ul class="prod-features">
-                            <li><i class="fa-solid fa-check"></i> Factor de potencia 0.9 con onda senoidal pura</li>
-                            <li><i class="fa-solid fa-check"></i> Ideal para proteger gabinetes de NVR y Switches</li>
-                            <li><i class="fa-solid fa-check"></i> Puerto inteligente SNMP opcional para monitoreo</li>
-                        </ul>
-                        <div class="prod-footer">
-                            <span class="prod-price">S/ 780.00</span>
-                            <div class="catalog-actions"><a class="btn-detail"
-                                    href="producto.html?sku=PWR-UPS3KVA-RT">Ver detalles</a><button class="btn-add"
-                                    onclick="addProductToCart('PWR-UPS3KVA-RT')"><i class="fa-solid fa-cart-plus"></i>
-                                    Agregar</button></div>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Accesorio 1 -->
-                <article class="product-card" data-category="redes">
-                    <div class="prod-image">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbSqwg3I9pJJ19LiUa7haxFWg6zFOUGgd4O7YikvMnwHnABfiZZosVnxaB&s=10auto=format&fit=crop&w=500&q=80"
-                            alt="Disco Duro WD Purple 8TB">
-                        <span class="brand-pill">WESTERN DIGITAL</span>
-                    </div>
-                    <div class="prod-details">
-                        <span class="prod-sku">SKU: WDP-80PURZ</span>
-                        <h3 class="prod-title"><a href="producto.html?sku=WDP-80PURZ">Disco Duro WD Purple 8TB 24/7
-                                Surveillance</a></h3>
-                        <div class="prod-footer">
-                            <span class="prod-price">S/ 215.00</span>
-                            <div class="catalog-actions"><a class="btn-detail"
-                                    href="producto.html?sku=WDP-80PURZ">Detalles</a><button class="btn-add"
-                                    onclick="addProductToCart('WDP-80PURZ')"><i class="fa-solid fa-plus"></i>
-                                    Agregar</button></div>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Accesorio 2 -->
-                <article class="product-card" data-category="redes">
-                    <div class="prod-image">
-                        <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=500&q=80"
-                            alt="Switch PoE 24 Puertos">
-                        <span class="brand-pill">UBIQUITI / CISCO</span>
-                    </div>
-                    <div class="prod-details">
-                        <span class="prod-sku">SKU: SW-POE24-380W</span>
-                        <h3 class="prod-title"><a href="producto.html?sku=SW-POE24-380W">Switch Gigabit PoE+ 24 Puertos
-                                380W L2+</a></h3>
-                        <div class="prod-footer">
-                            <span class="prod-price">S/ 320.00</span>
-                            <div class="catalog-actions"><a class="btn-detail"
-                                    href="producto.html?sku=SW-POE24-380W">Detalles</a><button class="btn-add"
-                                    onclick="addProductToCart('SW-POE24-380W')"><i class="fa-solid fa-plus"></i>
-                                    Agregar</button></div>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Accesorio 3 -->
-                <article class="product-card" data-category="incendio">
-                    <div class="prod-image">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLZA6hnVYnK9w33n8QGciSGM9geQVnO1vAK6FQqS-TFzuMLsEhJqmBu3VR&s=10auto=format&fit=crop&w=500&q=80"
-                            alt="Sensor de Humo Fotoeléctrico">
-                        <span class="brand-pill">SYSTEM SENSOR</span>
-                    </div>
-                    <div class="prod-details">
-                        <span class="prod-sku">SKU: SYS-2W-B</span>
-                        <h3 class="prod-title"><a href="producto.html?sku=SYS-2W-B">Pack 10x Detectores de Humo
-                                Fotoeléctricos + Base</a></h3>
-                        <div class="prod-footer">
-                            <span class="prod-price">S/ 280.00</span>
-                            <div class="catalog-actions"><a class="btn-detail"
-                                    href="producto.html?sku=SYS-2W-B">Detalles</a><button class="btn-add"
-                                    onclick="addProductToCart('SYS-2W-B')"><i class="fa-solid fa-plus"></i>
-                                    Agregar</button></div>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Accesorio 4 -->
-                <article class="product-card" data-category="redes">
-                    <div class="prod-image">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQM2fabKoDBZIRn9qlIFI4ODfKBgQkTh0BcjzJpLq5bjDkca0tu2Rwtmos&s=10auto=format&fit=crop&w=500&q=80"
-                            alt="Bobina UTP Cat6 LSZH">
-                        <span class="brand-pill">PANDUIT / DIXON</span>
-                    </div>
-                    <div class="prod-details">
-                        <span class="prod-sku">SKU: CAB-CAT6-LSZH</span>
-                        <h3 class="prod-title"><a href="producto.html?sku=CAB-CAT6-LSZH">Cable UTP Cat6 100% Cobre Libre
-                                de Halógeno 305m</a></h3>
-                        <div class="prod-footer">
-                            <span class="prod-price">S/ 165.00</span>
-                            <div class="catalog-actions"><a class="btn-detail"
-                                    href="producto.html?sku=CAB-CAT6-LSZH">Detalles</a><button class="btn-add"
-                                    onclick="addProductToCart('CAB-CAT6-LSZH')"><i class="fa-solid fa-plus"></i>
-                                    Agregar</button></div>
-                        </div>
-                    </div>
-                </article>
-            </div>
+            <!-- Grid Principal de Equipos (renderizado desde js/productos.js) -->
+            <div class="prod-grid" id="main-catalog"></div>
 
         </div>
     </section>
@@ -639,114 +314,11 @@
     <section id="licencias" class="licenses-section">
         <div class="container">
             <div class="section-header">
-                <h2><i class="fa-solid fa-key"></i> Licencias VMS y Analítica de Video</h2>
-                <p>Plataformas de software de gestión centralizada para centros de control (SOC). Activación electrónica
-                    oficial y soporte en despliegue de servidores.</p>
+                <h2><i class="fa-solid fa-key"></i> Licencias VMS, Analítica y Cloud</h2>
+                <p>Plataformas de software de gestión centralizada para centros de control (SOC) y respaldo en la nube.
+                    Activación electrónica oficial y soporte en despliegue de servidores.</p>
             </div>
-
-            <div class="license-grid">
-                <!-- Licencia 1: HikCentral -->
-                <div class="license-card">
-                    <div class="license-header">
-                        <div class="license-icon"><i class="fa-solid fa-tv"></i></div>
-                        <span class="license-type-badge">Licencia Perpetua</span>
-                    </div>
-                    <span class="prod-sku">SKU: LIC-HC-VSS-64</span>
-                    <h3><a href="producto.html?sku=LIC-HC-VSS-64">HikCentral Professional (Base + 64 Canales)</a></h3>
-                    <p>Plataforma unificada de videovigilancia, Video Wall inteligente, mapas interactivos GIS y gestión
-                        de alarmas en tiempo real.</p>
-                    <ul class="prod-features">
-                        <li><i class="fa-solid fa-check"></i> Incluye módulo base + 64 canales de video IP</li>
-                        <li><i class="fa-solid fa-check"></i> Compatible con clúster de failover (Alta disponibilidad)
-                        </li>
-                        <li><i class="fa-solid fa-check"></i> Clientes Web, Desktop y App Móvil ilimitados</li>
-                    </ul>
-                    <div class="prod-footer">
-                        <span class="prod-price">S/ 1,450.00</span>
-                        <div class="catalog-actions"><a class="btn-detail"
-                                href="producto.html?sku=LIC-HC-VSS-64">Detalles</a><button class="btn-add"
-                                onclick="addProductToCart('LIC-HC-VSS-64')"><i class="fa-solid fa-cart-plus"></i>
-                                Agregar</button></div>
-                    </div>
-                </div>
-
-                <!-- Licencia 2: LPR / ANPR -->
-                <div class="license-card">
-                    <div class="license-header">
-                        <div class="license-icon"><i class="fa-solid fa-car-side"></i></div>
-                        <span class="license-type-badge">Módulo IA / LPR</span>
-                    </div>
-                    <span class="prod-sku">SKU: LIC-HC-ANPR-1CH</span>
-                    <h3><a href="producto.html?sku=LIC-HC-ANPR-1CH">Módulo Lectura de Placas LPR y Acceso Vehicular</a>
-                    </h3>
-                    <p>Licencia de expansión por canal para reconocimiento automático de matrículas, apertura de
-                        barreras y listas blancas/negras.</p>
-                    <ul class="prod-features">
-                        <li><i class="fa-solid fa-check"></i> Tasa de precisión superior al 98.5% día/noche</li>
-                        <li><i class="fa-solid fa-check"></i> Reportes de tiempos de permanencia en estacionamientos
-                        </li>
-                        <li><i class="fa-solid fa-check"></i> Integración con barreras vehiculares vía relé/Wiegand</li>
-                    </ul>
-                    <div class="prod-footer">
-                        <span class="prod-price">S/ 240.00</span>
-                        <div class="catalog-actions"><a class="btn-detail"
-                                href="producto.html?sku=LIC-HC-ANPR-1CH">Detalles</a><button class="btn-add"
-                                onclick="addProductToCart('LIC-HC-ANPR-1CH')"><i class="fa-solid fa-cart-plus"></i>
-                                Agregar</button></div>
-                    </div>
-                </div>
-
-                <!-- Licencia 3: iVMS Enterprise / Acceso -->
-                <div class="license-card">
-                    <div class="license-header">
-                        <div class="license-icon"><i class="fa-solid fa-id-card-clip"></i></div>
-                        <span class="license-type-badge">Acceso & Asistencia</span>
-                    </div>
-                    <span class="prod-sku">SKU: LIC-HC-ACS-16D</span>
-                    <h3><a href="producto.html?sku=LIC-HC-ACS-16D">Licencia Control de Acceso & Tiempo y Asistencia (16
-                            Puertas)</a></h3>
-                    <p>Gestión avanzada de personal, turnos rotativos, cálculo de horas extras, esclusamiento de puertas
-                        y evacuación ante emergencias.</p>
-                    <ul class="prod-features">
-                        <li><i class="fa-solid fa-check"></i> Integración nativa con ERP y planillas (SQL/API)</li>
-                        <li><i class="fa-solid fa-check"></i> Monitoreo de apertura forzada y puerta abierta</li>
-                        <li><i class="fa-solid fa-check"></i> Enlace automático con disparo de cámaras CCTV</li>
-                    </ul>
-                    <div class="prod-footer">
-                        <span class="prod-price">S/ 490.00</span>
-                        <div class="catalog-actions"><a class="btn-detail"
-                                href="producto.html?sku=LIC-HC-ACS-16D">Detalles</a><button class="btn-add"
-                                onclick="addProductToCart('LIC-HC-ACS-16D')"><i class="fa-solid fa-cart-plus"></i>
-                                Agregar</button></div>
-                    </div>
-                </div>
-
-                <!-- Licencia 4: Software Incendio Gráfico -->
-                <div class="license-card">
-                    <div class="license-header">
-                        <div class="license-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
-                        <span class="license-type-badge">Monitoreo BMS</span>
-                    </div>
-                    <span class="prod-sku">SKU: LIC-BMS-FIRE-GW</span>
-                    <h3><a href="producto.html?sku=LIC-BMS-FIRE-GW">Gateway BACnet / Modbus & Estación Gráfica de
-                            Incendio</a></h3>
-                    <p>Licencia e interfaz para visualizar eventos de paneles de incendio sobre planos arquitectónicos
-                        AutoCAD en tiempo real.</p>
-                    <ul class="prod-features">
-                        <li><i class="fa-solid fa-check"></i> Identificación exacta del sensor activado en plano 2D/3D
-                        </li>
-                        <li><i class="fa-solid fa-check"></i> Protocolos abiertos BACnet IP y Modbus TCP</li>
-                        <li><i class="fa-solid fa-check"></i> Historial auditable para inspecciones de INDECI</li>
-                    </ul>
-                    <div class="prod-footer">
-                        <span class="prod-price">S/ 980.00</span>
-                        <div class="catalog-actions"><a class="btn-detail"
-                                href="producto.html?sku=LIC-BMS-FIRE-GW">Detalles</a><button class="btn-add"
-                                onclick="addProductToCart('LIC-BMS-FIRE-GW')"><i class="fa-solid fa-cart-plus"></i>
-                                Agregar</button></div>
-                    </div>
-                </div>
-            </div>
+            <div class="license-grid"></div>
         </div>
     </section>
 
@@ -760,7 +332,6 @@
             </div>
 
             <div class="support-grid">
-                <!-- Bloque 1: Utilitarios -->
                 <div class="support-box">
                     <h3><i class="fa-solid fa-download"></i> Herramientas & Utilitarios</h3>
                     <p style="color: var(--text-secondary); font-size: 0.92rem;">Software oficial para detección de
@@ -773,21 +344,20 @@
                             <i class="fa-solid fa-cloud-arrow-down"></i>
                         </div>
                         <div class="tool-item"
-                            onclick="showSystemToast('Calculadora Abierta', 'Abriendo calculadora de Storage & Ancho de Banda H.265+...')">
+                            onclick="VigilixTools.openStorageCalc()">
                             <span><i class="fa-solid fa-calculator" style="margin-right:8px;"></i> Calculadora Storage &
                                 Ancho de Banda</span>
                             <i class="fa-solid fa-up-right-from-square"></i>
                         </div>
                         <div class="tool-item"
-                            onclick="showSystemToast('Descarga Iniciada', 'Descargando Plantilla Excel de Cálculo de Baterías NFPA 72...')">
-                            <span><i class="fa-solid fa-car-battery" style="margin-right:8px;"></i> Plantilla Cálculo
+                            onclick="VigilixTools.openNfpaCalc()">
+                            <span><i class="fa-solid fa-car-battery" style="margin-right:8px;"></i> Calculadora de
                                 Baterías Incendio (NFPA 72)</span>
-                            <i class="fa-solid fa-file-excel"></i>
+                            <i class="fa-solid fa-up-right-from-square"></i>
                         </div>
                     </div>
                 </div>
 
-                <!-- Bloque 2: Configuración Remota -->
                 <div class="support-box">
                     <h3><i class="fa-solid fa-laptop-medical"></i> Puesta en Marcha & Lab</h3>
                     <p style="color: var(--text-secondary); font-size: 0.92rem;">Nuestros ingenieros certificados te
@@ -814,7 +384,6 @@
                     </div>
                 </div>
 
-                <!-- Bloque 3: Certificaciones -->
                 <div class="support-box">
                     <h3><i class="fa-solid fa-graduation-cap"></i> Academia Vigilix</h3>
                     <p style="color: var(--text-secondary); font-size: 0.92rem;">Capacitaciones técnicas presenciales y
@@ -847,8 +416,31 @@
     <!-- SECCIÓN 5: FORMULARIO DE COTIZACIÓN Y CONTACTO -->
     <section id="cotizar" class="quote-section">
         <div class="container">
+            <div class="sectors-strip" aria-label="Sectores atendidos">
+                <article class="sector-card">
+                    <div class="sector-card-head">
+                        <h4><i class="fa-solid fa-store" style="color:var(--accent-cyan)"></i> Retail & Comercios</h4>
+                        <span class="sector-metric">+180 sedes</span>
+                    </div>
+                    <p>Kits IP ColorVu 24/7, control de asistencia biométrico y alertas al celular para tiendas y restaurantes.</p>
+                </article>
+                <article class="sector-card">
+                    <div class="sector-card-head">
+                        <h4><i class="fa-solid fa-warehouse" style="color:var(--accent-amber)"></i> Almacenes & Industria</h4>
+                        <span class="sector-metric">LPR + PTZ 32X</span>
+                    </div>
+                    <p>Supervisión perimetral con analítica AcuSense, lectura de placas vehiculares y respaldo eléctrico UPS online.</p>
+                </article>
+                <article class="sector-card">
+                    <div class="sector-card-head">
+                        <h4><i class="fa-solid fa-building-shield" style="color:var(--accent-green)"></i> Edificios & INDECI</h4>
+                        <span class="sector-metric">UL / NFPA 72</span>
+                    </div>
+                    <p>Paneles direccionables Simplex y Honeywell, estaciones manuales y estaciones gráficas BMS listas para inspección.</p>
+                </article>
+            </div>
+
             <div class="quote-wrapper">
-                <!-- Columna Izquierda: Información -->
                 <div class="quote-info">
                     <span class="badge-tech"><i class="fa-solid fa-briefcase"></i> MESA DE PROYECTOS B2B</span>
                     <h3>Solicita tu Cotización Formal o Descuento por Volumen</h3>
@@ -882,14 +474,13 @@
                             <div>
                                 <strong style="display:block; font-family:var(--font-tech); font-size:1.1rem;">Centro
                                     Logístico & Showroom</strong>
-                                <span style="color:var(--text-secondary); font-size:0.9rem;">Av.Javier Prado Este,
+                                <span style="color:var(--text-secondary); font-size:0.9rem;">Av. Javier Prado Este,
                                     Distrito Financiero — Atención L-V 8:30 a 18:30</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Columna Derecha: Formulario Conectado a PHP -->
                 <form class="quote-form" id="b2b-quote-form" onsubmit="submitQuoteForm(event)">
                     <div class="form-group">
                         <label for="company">Nombre / Razón Social *</label>
@@ -913,27 +504,27 @@
                         <select id="solution-type" name="solucion_proyecto" required>
                             <option value="CCTV y Videovigilancia IP">Videovigilancia IP & NVR (CCTV)</option>
                             <option value="Detección de Incendios">Detección y Alarma de Incendios (UL / NFPA)</option>
-                            <option value="Control de Acceso y Biometría">Control de Acceso Biométrico y Asistencia
-                            </option>
-                            <option value="Licencias VMS y Analítica">Licencias VMS (HikCentral / Analítica LPR)
-                            </option>
-                            <option value="Proyecto Integral Multi-Sistema">Proyecto Integral Multi-Sistema (Llave en
-                                mano)</option>
+                            <option value="Control de Acceso y Biometría">Control de Acceso Biométrico y Asistencia</option>
+                            <option value="Licencias VMS y Analítica">Licencias VMS (HikCentral / Analítica LPR)</option>
+                            <option value="Proyecto Integral Multi-Sistema">Proyecto Integral Multi-Sistema (Llave en mano)</option>
                         </select>
                     </div>
                     <div class="form-group full-width">
-                        <label for="project-details">Descripción *</label>
+                        <div class="quote-label-row">
+                            <label for="project-details">Descripción *</label>
+                            <button type="button" class="btn-import-cart" onclick="fillQuoteWithCart()">
+                                <i class="fa-solid fa-cart-arrow-down"></i> Cargar mi carrito
+                            </button>
+                        </div>
                         <textarea id="project-details" name="descripcion" rows="4"
                             placeholder="Escribe aquí los modelos, cantidades o pega los SKUs de tu proyecto..."
                             required></textarea>
                     </div>
 
-                    <!-- Campo oculto que guarda el monto numérico del carrito -->
                     <input type="hidden" id="total-estimado-input" name="total_estimado" value="0">
 
                     <div class="form-group full-width" style="margin-top: 0.5rem;">
-                        <button type="submit" id="btn-submit-quote" class="btn-primary"
-                            style="width: 100%; justify-content: center;">
+                        <button type="submit" id="btn-submit-quote" class="btn-primary" style="width: 100%;">
                             <i class="fa-solid fa-paper-plane"></i> Enviar Solicitud
                         </button>
                     </div>
@@ -942,19 +533,25 @@
         </div>
     </section>
 
-    <!-- FOOTER COMPLETO -->
+    <!-- FOOTER -->
     <footer>
         <div class="container footer-grid">
             <div class="footer-col">
-                <a href="#" class="logo" style="margin-bottom: 1.2rem;">
+                <a href="#" class="logo" style="margin-bottom: 1rem;">
                     <i class="fa-solid fa-shield-halved"></i> VIGILIX
                 </a>
-                <p class="footer-desc">El nodo central para integradores de seguridad electrónica. Infraestructura,
-                    licenciamiento, soporte de ingeniería y logística para proyectos de misión crítica.</p>
+                <p class="footer-desc">El nodo central para integradores y clientes de seguridad electrónica.
+                    Infraestructura, licenciamiento, soporte de ingeniería y tienda online con despacho a todo el Perú.</p>
+                <div class="payment-badges" style="margin-bottom: 1.2rem;">
+                    <span class="pay-pill">VISA</span>
+                    <span class="pay-pill">Mastercard</span>
+                    <span class="pay-pill yape">Yape</span>
+                    <span class="pay-pill plin">Plin</span>
+                </div>
                 <div class="social-links">
                     <a href="#cotizar" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
                     <a href="#cotizar" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
-                    <a href="#cotizar" title="WhatsApp B2B"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a id="footer-whatsapp-link" href="#cotizar" target="_blank" rel="noopener" title="WhatsApp B2B"><i class="fa-brands fa-whatsapp"></i></a>
                 </div>
             </div>
 
@@ -970,11 +567,11 @@
             </div>
 
             <div class="footer-col">
-                <h4>Soporte B2B</h4>
+                <h4>Compra Online</h4>
                 <ul class="footer-links">
-                    <li><a href="#soporte">Descarga SADP Tool</a></li>
-                    <li><a href="#soporte">Calculadora de Storage</a></li>
-                    <li><a href="#soporte">Trámite de Garantía RMA</a></li>
+                    <li><a href="carrito.html">Mi Carrito</a></li>
+                    <li><a href="#equipos" onclick="filterProducts('residencial')">Seguridad Residencial</a></li>
+                    <li><a href="#soporte">Soporte & Garantías RMA</a></li>
                     <li><a href="#cotizar">Registro de Proyectos</a></li>
                 </ul>
             </div>
@@ -993,17 +590,16 @@
         </div>
         <div class="footer-bottom">
             <div class="container">
-                &copy; 2026 Vigilix Security Distribution. Todos los derechos reservados. | Diseñado para Integradores
-                de Seguridad Electrónica.
+                &copy; 2026 Vigilix Security Distribution. Todos los derechos reservados. | Seguridad Electrónica B2B y
+                Tienda Online.
             </div>
         </div>
     </footer>
 
-    <!-- Contenedor de Toasts -->
     <div id="toast-container"></div>
 
-    <!-- Botón y Ventana del Chatbot Vigilix -->
-    <button class="chatbot-toggler" onclick="toggleChatbot()" title="Asistente de Ingeniería Vigilix">
+    <!-- Chatbot Vigilix -->
+    <button type="button" class="chatbot-toggler" onclick="toggleChatbot()" title="Asistente de Ingeniería Vigilix">
         <i class="fa-solid fa-robot" id="chatbot-icon"></i>
     </button>
 
@@ -1016,244 +612,35 @@
                     <span><i class="fa-solid fa-circle" style="font-size: 7px;"></i> Ingeniería en línea</span>
                 </div>
             </div>
-            <button class="chat-close" onclick="toggleChatbot()"><i class="fa-solid fa-xmark"></i></button>
+            <button type="button" class="chat-close" onclick="toggleChatbot()"><i class="fa-solid fa-xmark"></i></button>
         </div>
 
         <div class="chat-body" id="chat-body">
             <div class="chat-msg bot">
-                ¡Hola! Soy el asistente de <strong>Vigilix</strong>. Elige una categoría o escribe tu consulta.
+                ¡Hola! Soy el asistente de <strong>Vigilix</strong>. Explora nuestros 30 productos o consulta sobre
+                <strong>Tarjeta, Yape y Plin</strong>.
                 <div class="chat-quick-btns">
-                    <button class="chat-chip" onclick="sendQuickChat('Videovigilancia')"><i
-                            class="fa-solid fa-video"></i> Videovigilancia</button>
-                    <button class="chat-chip" onclick="sendQuickChat('Detección de incendios')"><i
-                            class="fa-solid fa-fire-extinguisher"></i> Incendios</button>
-                    <button class="chat-chip" onclick="sendQuickChat('Control de acceso')"><i
-                            class="fa-solid fa-fingerprint"></i> Acceso</button>
-                    <button class="chat-chip" onclick="sendQuickChat('Redes y energía')"><i
-                            class="fa-solid fa-network-wired"></i> Redes</button>
-                    <button class="chat-chip" onclick="sendQuickChat('Quiero cotizar')"><i
-                            class="fa-solid fa-file-signature"></i> Cotizar</button>
+                    <button type="button" class="chat-chip" onclick="sendQuickChat('Videovigilancia')"><i class="fa-solid fa-video"></i> Videovigilancia</button>
+                    <button type="button" class="chat-chip" onclick="sendQuickChat('Detección de incendios')"><i class="fa-solid fa-fire-extinguisher"></i> Incendios</button>
+                    <button type="button" class="chat-chip" onclick="sendQuickChat('Control de acceso')"><i class="fa-solid fa-fingerprint"></i> Acceso</button>
+                    <button type="button" class="chat-chip" onclick="sendQuickChat('Redes y energía')"><i class="fa-solid fa-network-wired"></i> Redes</button>
+                    <button type="button" class="chat-chip" onclick="sendQuickChat('Métodos de pago')"><i class="fa-solid fa-credit-card"></i> Pagos</button>
                 </div>
             </div>
         </div>
 
         <form class="chat-footer" onsubmit="handleChatSubmit(event)">
-            <input type="text" id="chat-input" placeholder="Pregunta por SKU, NVR, Simplex..." autocomplete="off">
+            <input type="text" id="chat-input" placeholder="Pregunta por SKU, Yape, Plin, NVR..." autocomplete="off">
             <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
         </form>
     </div>
 
-    <!-- Scripts -->
-    <script src="commerce.js?v=20261124-3"></script>
-    <script>
-        const cartCounterElements = document.querySelectorAll('.cart-counter');
-        const toastContainer = document.getElementById('toast-container');
-
-        function updateCartCounter() {
-            cartCounterElements.forEach(counter => counter.innerText = VigilixCommerce.count());
-        }
-
-        function addProductToCart(sku) {
-            const product = VigilixCommerce.PRODUCTS[sku];
-            if (!product) return;
-            VigilixCommerce.addItem(sku);
-            updateCartCounter();
-            cartCounterElements.forEach(counter => counter.style.transform = 'scale(1.4)');
-            setTimeout(() => cartCounterElements.forEach(counter => counter.style.transform = 'scale(1)'), 200);
-            showSystemToast('Producto agregado', `<strong>${product.name}</strong> se añadió al carrito por <strong>${VigilixCommerce.formatMoney(product.price)}</strong>.`);
-        }
-
-        updateCartCounter();
-        window.addEventListener('vigilix:cart-updated', updateCartCounter);
-        VigilixCommerce.track('view_item_list', { item_list_id: 'catalogo_principal', item_list_name: 'Catálogo principal' });
-
-        // Mostrar notificación Toast reutilizable
-        function showSystemToast(title, message) {
-            const toast = document.createElement('div');
-            toast.className = 'toast';
-
-            toast.innerHTML = `
-                <div class="toast-icon">
-                    <i class="fa-solid fa-circle-check"></i>
-                </div>
-                <div class="toast-content">
-                    <h5>${title}</h5>
-                    <p>${message}</p>
-                </div>
-            `;
-
-            toastContainer.appendChild(toast);
-
-            setTimeout(() => {
-                toast.classList.add('fade-out');
-                setTimeout(() => {
-                    toast.remove();
-                }, 350);
-            }, 3500);
-        }
-
-        // Filtrado de productos por categoría
-        function filterProducts(category, btnElement = null) {
-            if (btnElement) {
-                document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-                btnElement.classList.add('active');
-            }
-
-            const cards = document.querySelectorAll('#main-catalog .product-card');
-            cards.forEach(card => {
-                if (category === 'todos' || card.dataset.category === category) {
-                    card.style.display = 'flex';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        }
-
-        // Buscador en tiempo real por SKU, marca o título
-        const searchInput = document.getElementById('search-input');
-        searchInput.addEventListener('input', function (e) {
-            const term = e.target.value.toLowerCase().trim();
-            const allCards = document.querySelectorAll('.product-card, .license-card');
-
-            allCards.forEach(card => {
-                const text = card.innerText.toLowerCase();
-                if (text.includes(term)) {
-                    card.style.display = 'flex';
-                    card.style.borderColor = term.length > 2 ? 'var(--accent-cyan)' : '';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        });
-
-        // Envío REAL del formulario de cotización hacia guardar_cotizacion.php
-        async function submitQuoteForm(event) {
-            event.preventDefault();
-
-            const form = document.getElementById('b2b-quote-form');
-            const submitBtn = document.getElementById('btn-submit-quote');
-            const company = document.getElementById('company').value;
-            const formData = new FormData(form);
-
-            // Deshabilitar botón mientras guarda
-            submitBtn.disabled = true;
-            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Procesando en servidor...';
-
-            try {
-                const response = await fetch('guardar_cotizacion.php', {
-                    method: 'POST',
-                    body: formData
-                });
-
-                const result = await response.json();
-
-                if (result.exito) {
-                    showSystemToast(
-                        `Cotización #VGX-${result.id_generado} Guardada`,
-                        `Gracias, <strong>${company}</strong>. Tu solicitud se registró en nuestra base de datos correctamente.`
-                    );
-                    form.reset();
-                    document.getElementById('total-estimado-input').value = '0';
-                } else {
-                    showSystemToast(
-                        'Error al Registrar',
-                        result.mensaje || 'No se pudo guardar en la base de datos.'
-                    );
-                }
-            } catch (error) {
-                showSystemToast(
-                    'Error de Conexión',
-                    'Asegúrate de estar ejecutando la web desde tu hosting InfinityFree con guardar_cotizacion.php.'
-                );
-            } finally {
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Enviar Solicitud de Cotización Formal';
-            }
-        }
-
-        // Suscripción al boletín
-        function subscribeNewsletter(event) {
-            event.preventDefault();
-            const emailInput = document.getElementById('newsletter-email');
-            showSystemToast('Suscripción Activa', `El correo <strong>${emailInput.value}</strong> ha sido registrado en el boletín técnico.`);
-            emailInput.value = '';
-        }
-
-        // === Lógica del Chatbot Asistente Vigilix ===
-        const chatbotWindow = document.getElementById('chatbot-window');
-        const chatBody = document.getElementById('chat-body');
-        const chatInput = document.getElementById('chat-input');
-
-        function toggleChatbot(forceOpen = false) {
-            if (forceOpen) chatbotWindow.classList.add('active');
-            else chatbotWindow.classList.toggle('active');
-            const icon = document.getElementById('chatbot-icon');
-            icon.className = chatbotWindow.classList.contains('active')
-                ? 'fa-solid fa-xmark'
-                : 'fa-solid fa-robot';
-        }
-
-        function sendQuickChat(text) {
-            appendMessage(text, 'user');
-            setTimeout(() => generateBotResponse(text), 350);
-        }
-
-        function handleChatSubmit(e) {
-            e.preventDefault();
-            const text = chatInput.value.trim();
-            if (!text) return;
-            appendMessage(text, 'user');
-            chatInput.value = '';
-            setTimeout(() => generateBotResponse(text), 400);
-        }
-
-        function appendMessage(htmlContent, sender) {
-            const msgDiv = document.createElement('div');
-            msgDiv.className = `chat-msg ${sender}`;
-            if (sender === 'user') msgDiv.textContent = htmlContent;
-            else msgDiv.innerHTML = htmlContent;
-            chatBody.appendChild(msgDiv);
-            chatBody.scrollTop = chatBody.scrollHeight;
-        }
-
-        function productChatOptions(skus, intro) {
-            const cards = skus.map(sku => {
-                const product = VigilixCommerce.PRODUCTS[sku];
-                return `<div class="chat-product-item"><div><strong>${product.name}</strong><span>${VigilixCommerce.formatMoney(product.price)}</span></div><div><a href="producto.html?sku=${product.sku}">Detalles</a><button onclick="addProductToCart('${product.sku}')">+ Carrito</button></div></div>`;
-            }).join('');
-            return `${intro}<div class="chat-product-list">${cards}</div><div class="chat-quick-btns"><button class="chat-chip" onclick="sendQuickChat('Menú principal')">← Categorías</button><a class="chat-chip" href="carrito.html">Ver carrito</a></div>`;
-        }
-
-        function generateBotResponse(input) {
-            const q = input.toLowerCase();
-            let reply = '';
-
-            if (q.includes('menú') || q.includes('menu') || q.includes('categoría') || q.includes('categoria')) {
-                reply = `Elige una familia para ver productos:<div class="chat-quick-btns"><button class="chat-chip" onclick="sendQuickChat('Videovigilancia')">Videovigilancia</button><button class="chat-chip" onclick="sendQuickChat('Detección de incendios')">Incendios</button><button class="chat-chip" onclick="sendQuickChat('Control de acceso')">Acceso</button><button class="chat-chip" onclick="sendQuickChat('Redes y energía')">Redes</button><button class="chat-chip" onclick="sendQuickChat('Quiero cotizar')">Cotizar</button></div>`;
-            } else if (q.includes('envío') || q.includes('envio') || q.includes('contraentrega') || q.includes('delivery')) {
-                reply = `El envío en <strong>Lima Metropolitana cuesta S/ 10.00</strong> y el recojo coordinado es gratuito. Puedes seleccionar <strong>pago contraentrega</strong> al confirmar tu pedido.`;
-            } else if (q.includes('a9') || q.includes('residencial') || q.includes('nvr') || q.includes('hikvision') || q.includes('cctv') || q.includes('videovigilancia') || q.includes('camara') || q.includes('cámara')) {
-                reply = productChatOptions(['VGX-A9-TUYA', 'HKV-BULLET-4MP', 'HKV-7732NI-K4', 'HKV-DS2DE7A432'], 'Estas son nuestras opciones principales de <strong>videovigilancia</strong>:');
-            } else if (q.includes('incendio') || q.includes('simplex') || q.includes('honeywell') || q.includes('panel') || q.includes('nfpa')) {
-                reply = productChatOptions(['SMP-4007ES-HYB', 'HON-ES50X', 'SYS-2W-B'], 'Equipos disponibles para <strong>detección de incendios</strong>:');
-            } else if (q.includes('acceso') || q.includes('facial') || q.includes('huella') || q.includes('biometr')) {
-                reply = productChatOptions(['HKV-K1T671M', 'LIC-HC-ACS-16D'], 'Opciones de <strong>control de acceso y asistencia</strong>:');
-            } else if (q.includes('redes') || q.includes('energía') || q.includes('energia') || q.includes('ups') || q.includes('switch') || q.includes('cable') || q.includes('disco')) {
-                reply = productChatOptions(['PWR-UPS3KVA-RT', 'SW-POE24-380W', 'WDP-80PURZ', 'CAB-CAT6-LSZH'], 'Productos para <strong>redes, almacenamiento y energía</strong>:');
-            } else if (q.includes('licencia') || q.includes('hikcentral') || q.includes('vms') || q.includes('lpr')) {
-                reply = productChatOptions(['LIC-HC-VSS-64', 'LIC-HC-ANPR-1CH', 'LIC-HC-ACS-16D', 'LIC-BMS-FIRE-GW'], 'Licencias y módulos de software disponibles:');
-            } else if (q.includes('sadp') || q.includes('soporte') || q.includes('herramienta')) {
-                reply = `En nuestra sección de <a href="#soporte" style="color:var(--accent-cyan);text-decoration:underline;">Soporte B2B</a> puedes descargar <strong>SADP Tool v3.1.4</strong>, la calculadora de discos WD Purple y la plantilla Excel de baterías NFPA 72.`;
-            } else if (q.includes('cotiza') || q.includes('precio') || q.includes('contacto') || q.includes('correo')) {
-                reply = `Puedes comprar equipos desde el catálogo o enviarnos una lista para obtener precios por volumen en el <a href="#cotizar" style="color:var(--accent-amber);font-weight:bold;text-decoration:underline;">Formulario de Cotización</a>.`;
-                location.hash = '#cotizar';
-            } else {
-                reply = `Puedo ayudarte a elegir entre <strong>videovigilancia</strong>, <strong>incendios</strong>, <strong>control de acceso</strong> y <strong>redes y energía</strong>. También puedo mostrar detalles, agregar productos al carrito o llevarte a cotizar.`;
-            }
-
-            appendMessage(reply, 'bot');
-        }
-    </script>
+    <script src="js/productos.js?v=20261124-10"></script>
+    <script src="js/commerce.js?v=20261124-10"></script>
+    <script src="js/ui.js?v=20261124-10"></script>
+    <script src="js/herramientas.js?v=20261124-10"></script>
+    <script src="js/home.js?v=20261124-11"></script>
+    <script src="js/asistente.js?v=20261124-11"></script>
 </body>
 
 </html>

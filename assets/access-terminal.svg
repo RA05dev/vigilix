@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-labelledby="t d">
+  <title id="t">Terminal Biométrico Facial y Palma</title><desc id="d">Terminal de control de acceso con pantalla táctil y reconocimiento facial.</desc>
+  <defs><radialGradient id="bg" cx="50%" cy="40%" r="65%"><stop offset="0" stop-color="#193352"/><stop offset="1" stop-color="#090e16"/></radialGradient></defs>
+  <rect width="640" height="480" rx="28" fill="url(#bg)"/>
+  <ellipse cx="320" cy="415" rx="115" ry="18" fill="#000" opacity=".45"/>
+  <rect x="220" y="65" width="200" height="330" rx="26" fill="#0f172a" stroke="#64748b" stroke-width="6"/>
+  <circle cx="298" cy="100" r="9" fill="#00f2fe"/><circle cx="342" cy="100" r="9" fill="#334155"/>
+  <rect x="240" y="128" width="160" height="205" rx="12" fill="#071321" stroke="#00f2fe" stroke-width="3"/>
+  <circle cx="320" cy="202" r="34" fill="none" stroke="#00f2fe" stroke-width="4"/>
+  <path d="M276 286c8-30 28-44 44-44s36 14 44 44" fill="none" stroke="#00f2fe" stroke-width="4" stroke-linecap="round"/>
+  <path d="M258 158v-14h14m96 0h14v14m-14 148h14v-14m-110 14h-14v-14" fill="none" stroke="#10b981" stroke-width="4" stroke-linecap="round"/>
+  <rect x="278" y="352" width="84" height="20" rx="10" fill="#1e293b"/>
+  <text x="320" y="448" fill="#dbeafe" font-family="Arial,sans-serif" font-size="20" font-weight="700" text-anchor="middle" letter-spacing="3">BIOMETRÍA FACIAL PRO</text>
+</svg>
