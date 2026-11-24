@@ -2,19 +2,15 @@
 <html lang="es">
 
 <head>
-        <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-WQHF4V39"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-</script>
+    <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-WQHF4V39"></script>
+    <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments) } gtag('js', new Date());</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Revisar pedido | Vigilix</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="checkout.css">
+    <link rel="stylesheet" href="checkout.css?v=20261124-4">
 </head>
 
 <body>
@@ -52,7 +48,7 @@
             </aside>
         </div>
     </main>
-    <script src="../commerce.js"></script>
+    <script src="../commerce.js?v=20261124-3"></script>
     <script>
         const commerce = window.VigilixCommerce, shipping = commerce.getShipping(); if (!commerce.count()) location.replace('../carrito.html'); if (!shipping) location.replace('envio.html'); const cost = commerce.shippingCost(shipping.deliveryMethod); document.getElementById('summary-items').innerHTML = commerce.getDetailedCart().map(item => `<div class="summary-line"><span>${item.quantity} × ${item.name}</span><strong>${commerce.formatMoney(item.subtotal)}</strong></div>`).join(''); document.getElementById('subtotal').textContent = commerce.formatMoney(commerce.subtotal()); document.getElementById('shipping-cost').textContent = cost ? commerce.formatMoney(cost) : 'Gratis'; document.getElementById('total').textContent = commerce.formatMoney(commerce.subtotal() + cost); const delivery = shipping.deliveryMethod === 'delivery-lima' ? `${shipping.address}, ${shipping.district}${shipping.reference ? ` — Ref.: ${shipping.reference}` : ''}` : 'Recojo coordinado'; document.getElementById('shipping-summary').innerHTML = `<strong style="color:#f8fafc">${shipping.name}</strong><br>${delivery}<br>${shipping.phone} · ${shipping.email}`; commerce.trackCartEvent('add_payment_info', { payment_type: 'cash-on-delivery' }); document.getElementById('finish').addEventListener('click', () => { try { document.getElementById('finish').disabled = true; commerce.makeOrder(); location.href = 'gracias.html'; } catch (error) { document.getElementById('error').textContent = error.message; document.getElementById('finish').disabled = false; } });
     </script>

@@ -86,3 +86,23 @@ label { display: block; font-weight: 700; margin-bottom: 6px; }
     .cart-price { grid-column: 2; }
     .steps li { font-size: .82rem; }
 }
+
+@media (max-width: 520px) {
+    .header-inner, .checkout-shell { width: min(100% - 24px, 1080px); }
+    .header-inner { min-height: 64px; }
+    .brand { font-size: 1.15rem; }
+    .back-link { font-size: .82rem; text-align: right; }
+    .checkout-shell { padding: 28px 0 52px; }
+    .panel { padding: 16px; border-radius: 9px; min-width: 0; }
+    .steps { gap: 4px; }
+    .steps li { padding: 8px 3px; font-size: .72rem; }
+    .cart-row { grid-template-columns: 56px minmax(0, 1fr); gap: 12px; }
+    .cart-row img { width: 56px; height: 56px; }
+    .cart-row > div { min-width: 0; }
+    .item-name, .muted { overflow-wrap: anywhere; }
+    .qty-wrap { flex-wrap: wrap; gap: 8px; }
+    .qty-wrap label { width: 100%; margin: 0; }
+    .qty-wrap input { width: 64px; }
+    .cart-price { grid-column: 2; }
+    .summary-line { gap: 10px; }
+}

@@ -3,11 +3,7 @@
 
 <head>
     <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-WQHF4V39"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-</script>
+    <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments) } gtag('js', new Date());</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex">
@@ -15,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="checkout.css">
+    <link rel="stylesheet" href="checkout.css?v=20261124-4">
 </head>
 
 <body>
@@ -49,7 +45,7 @@
                 href="../index.html#equipos">Ver catálogo</a>
         </section>
     </main>
-    <script src="../commerce.js"></script>
+    <script src="../commerce.js?v=20261124-3"></script>
     <script>const order = VigilixCommerce.getLastOrder(), success = document.getElementById('success'), missing = document.getElementById('missing'); if (order) { success.classList.remove('hidden'); document.getElementById('order-id').textContent = order.id; document.getElementById('order-total').textContent = VigilixCommerce.formatMoney(order.total); } else missing.classList.remove('hidden');</script>
 </body>
 

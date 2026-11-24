@@ -3,11 +3,7 @@
 
 <head>
     <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-WQHF4V39"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
-  gtag('js', new Date());
-</script>
+    <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments) } gtag('js', new Date());</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
@@ -19,8 +15,8 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Rajdhani:wght@500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="producto.css">
+    <link rel="stylesheet" href="index.css?v=20261124-7">
+    <link rel="stylesheet" href="producto.css?v=20261124-3">
 </head>
 
 <body>
@@ -197,7 +193,7 @@
     </footer>
     <div id="toast-container"></div>
 
-    <script src="commerce.js"></script>
+    <script src="commerce.js?v=20261124-3"></script>
     <script>
         const params = new URLSearchParams(location.search), sku = params.get('sku'), product = VigilixCommerce.PRODUCTS[sku], cartCounter = document.getElementById('cart-counter');
         function escapeHtml(value) { return String(value).replace(/[&<>'"]/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[char])); }
