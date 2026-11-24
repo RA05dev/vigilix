@@ -1,32 +1,56 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="noindex">
+    <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-WQHF4V39"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
     <title>Pedido generado | Vigilix</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="checkout.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="checkout.css">
 </head>
+
 <body>
-    <header class="site-header"><div class="header-inner"><a class="brand" href="../index.html"><span>◆</span> VIGILIX</a></div></header>
+    <header class="site-header">
+        <div class="header-inner"><a class="brand" href="../index.html"><span>◆</span> VIGILIX</a></div>
+    </header>
     <main class="checkout-shell">
         <section id="success" class="panel success hidden">
-            <div class="success-icon">✅</div><div class="eyebrow">Pedido generado</div><h1>¡Gracias por elegir Vigilix!</h1>
-            <p>Hemos generado el resumen de tu pedido. Guarda el número para coordinar la disponibilidad y la entrega.</p>
+            <div class="success-icon">✅</div>
+            <div class="eyebrow">Pedido generado</div>
+            <h1>¡Gracias por elegir Vigilix!</h1>
+            <p>Hemos generado el resumen de tu pedido. Guarda el número para coordinar la disponibilidad y la entrega.
+            </p>
             <p class="order-id" id="order-id"></p>
             <div style="max-width:520px;margin:24px auto;text-align:left">
                 <div class="summary-line"><span>Total del pedido</span><strong id="order-total"></strong></div>
                 <div class="summary-line"><span>Método</span><strong>Pago contraentrega</strong></div>
-                <div class="summary-line"><span>Estado</span><strong style="color:var(--amber)">Pendiente de confirmación</strong></div>
+                <div class="summary-line"><span>Estado</span><strong style="color:var(--amber)">Pendiente de
+                        confirmación</strong></div>
             </div>
-            <p class="notice"><strong>Siguiente paso:</strong> nuestro equipo validará la disponibilidad y coordinará contigo la fecha de entrega o recojo.</p>
+            <p class="notice"><strong>Siguiente paso:</strong> nuestro equipo validará la disponibilidad y coordinará
+                contigo la fecha de entrega o recojo.</p>
             <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
                 <a class="button button-primary" style="max-width:320px" href="../index.html">Volver a Vigilix</a>
                 <a class="button button-secondary" href="../index.html#equipos">Seguir comprando</a>
             </div>
         </section>
-        <section id="missing" class="panel empty hidden"><h1>No hay un pedido reciente</h1><p class="muted">Agrega un producto al carrito para generar un pedido.</p><a class="button button-secondary" href="../index.html#equipos">Ver catálogo</a></section>
+        <section id="missing" class="panel empty hidden">
+            <h1>No hay un pedido reciente</h1>
+            <p class="muted">Agrega un producto al carrito para generar un pedido.</p><a class="button button-secondary"
+                href="../index.html#equipos">Ver catálogo</a>
+        </section>
     </main>
     <script src="../commerce.js"></script>
-    <script>const order=VigilixCommerce.getLastOrder(),success=document.getElementById('success'),missing=document.getElementById('missing');if(order){success.classList.remove('hidden');document.getElementById('order-id').textContent=order.id;document.getElementById('order-total').textContent=VigilixCommerce.formatMoney(order.total);}else missing.classList.remove('hidden');</script>
+    <script>const order = VigilixCommerce.getLastOrder(), success = document.getElementById('success'), missing = document.getElementById('missing'); if (order) { success.classList.remove('hidden'); document.getElementById('order-id').textContent = order.id; document.getElementById('order-total').textContent = VigilixCommerce.formatMoney(order.total); } else missing.classList.remove('hidden');</script>
 </body>
+
 </html>

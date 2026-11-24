@@ -1,11 +1,61 @@
 <!DOCTYPE html>
-<html lang="es"><head>
-    <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-5HQ9DHSM"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());</script>
-    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Revisar pedido | Vigilix</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="checkout.css">
-</head><body>
-    <header class="site-header"><div class="header-inner"><a class="brand" href="../index.html"><span>◆</span> VIGILIX</a><a class="back-link" href="envio.html">← Editar envío</a></div></header>
-    <main class="checkout-shell"><div class="eyebrow">Compra online</div><h1>Revisión y contraentrega</h1><p class="lead">Verifica el resumen, la entrega y el método de pago antes de generar tu pedido.</p><ol class="steps"><li>1. Carrito</li><li>2. Envío</li><li class="active">3. Confirmación</li></ol><div class="notice"><strong>Pago contraentrega:</strong> paga al recibir el producto. No necesitas ingresar datos bancarios.</div>
-        <div class="layout"><section class="panel"><h2>Método de pago</h2><label class="radio-card"><input type="radio" checked><strong>Pago contraentrega</strong><small>El pago se realiza al momento de recibir el producto.</small></label><h2 style="margin-top:28px">Entrega</h2><div id="shipping-summary" class="muted"></div></section><aside class="panel"><h2>Tu pedido</h2><div id="summary-items"></div><div class="summary-line"><span>Subtotal</span><strong id="subtotal"></strong></div><div class="summary-line"><span>Envío</span><strong id="shipping-cost"></strong></div><div class="summary-line summary-total"><span>Total</span><strong id="total"></strong></div><button id="finish" class="button button-primary" type="button">Generar pedido</button><p id="error" class="error" role="alert"></p></aside></div>
-    </main><script src="../commerce.js"></script><script>
-        const commerce=window.VigilixCommerce,shipping=commerce.getShipping();if(!commerce.count())location.replace('../carrito.html');if(!shipping)location.replace('envio.html');const cost=commerce.shippingCost(shipping.deliveryMethod);document.getElementById('summary-items').innerHTML=commerce.getDetailedCart().map(item=>`<div class="summary-line"><span>${item.quantity} × ${item.name}</span><strong>${commerce.formatMoney(item.subtotal)}</strong></div>`).join('');document.getElementById('subtotal').textContent=commerce.formatMoney(commerce.subtotal());document.getElementById('shipping-cost').textContent=cost?commerce.formatMoney(cost):'Gratis';document.getElementById('total').textContent=commerce.formatMoney(commerce.subtotal()+cost);const delivery=shipping.deliveryMethod==='delivery-lima'?`${shipping.address}, ${shipping.district}${shipping.reference?` — Ref.: ${shipping.reference}`:''}`:'Recojo coordinado';document.getElementById('shipping-summary').innerHTML=`<strong style="color:#f8fafc">${shipping.name}</strong><br>${delivery}<br>${shipping.phone} · ${shipping.email}`;commerce.trackCartEvent('add_payment_info',{payment_type:'cash-on-delivery'});document.getElementById('finish').addEventListener('click',()=>{try{document.getElementById('finish').disabled=true;commerce.makeOrder();location.href='gracias.html';}catch(error){document.getElementById('error').textContent=error.message;document.getElementById('finish').disabled=false;}});
-    </script></body></html>
+<html lang="es">
+
+<head>
+        <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-WQHF4V39"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisar pedido | Vigilix</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="checkout.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="header-inner"><a class="brand" href="../index.html"><span>◆</span> VIGILIX</a><a class="back-link"
+                href="envio.html">← Editar envío</a></div>
+    </header>
+    <main class="checkout-shell">
+        <div class="eyebrow">Compra online</div>
+        <h1>Revisión y contraentrega</h1>
+        <p class="lead">Verifica el resumen, la entrega y el método de pago antes de generar tu pedido.</p>
+        <ol class="steps">
+            <li>1. Carrito</li>
+            <li>2. Envío</li>
+            <li class="active">3. Confirmación</li>
+        </ol>
+        <div class="notice"><strong>Pago contraentrega:</strong> paga al recibir el producto. No necesitas ingresar
+            datos bancarios.</div>
+        <div class="layout">
+            <section class="panel">
+                <h2>Método de pago</h2><label class="radio-card"><input type="radio" checked><strong>Pago
+                        contraentrega</strong><small>El pago se realiza al momento de recibir el
+                        producto.</small></label>
+                <h2 style="margin-top:28px">Entrega</h2>
+                <div id="shipping-summary" class="muted"></div>
+            </section>
+            <aside class="panel">
+                <h2>Tu pedido</h2>
+                <div id="summary-items"></div>
+                <div class="summary-line"><span>Subtotal</span><strong id="subtotal"></strong></div>
+                <div class="summary-line"><span>Envío</span><strong id="shipping-cost"></strong></div>
+                <div class="summary-line summary-total"><span>Total</span><strong id="total"></strong></div><button
+                    id="finish" class="button button-primary" type="button">Generar pedido</button>
+                <p id="error" class="error" role="alert"></p>
+            </aside>
+        </div>
+    </main>
+    <script src="../commerce.js"></script>
+    <script>
+        const commerce = window.VigilixCommerce, shipping = commerce.getShipping(); if (!commerce.count()) location.replace('../carrito.html'); if (!shipping) location.replace('envio.html'); const cost = commerce.shippingCost(shipping.deliveryMethod); document.getElementById('summary-items').innerHTML = commerce.getDetailedCart().map(item => `<div class="summary-line"><span>${item.quantity} × ${item.name}</span><strong>${commerce.formatMoney(item.subtotal)}</strong></div>`).join(''); document.getElementById('subtotal').textContent = commerce.formatMoney(commerce.subtotal()); document.getElementById('shipping-cost').textContent = cost ? commerce.formatMoney(cost) : 'Gratis'; document.getElementById('total').textContent = commerce.formatMoney(commerce.subtotal() + cost); const delivery = shipping.deliveryMethod === 'delivery-lima' ? `${shipping.address}, ${shipping.district}${shipping.reference ? ` — Ref.: ${shipping.reference}` : ''}` : 'Recojo coordinado'; document.getElementById('shipping-summary').innerHTML = `<strong style="color:#f8fafc">${shipping.name}</strong><br>${delivery}<br>${shipping.phone} · ${shipping.email}`; commerce.trackCartEvent('add_payment_info', { payment_type: 'cash-on-delivery' }); document.getElementById('finish').addEventListener('click', () => { try { document.getElementById('finish').disabled = true; commerce.makeOrder(); location.href = 'gracias.html'; } catch (error) { document.getElementById('error').textContent = error.message; document.getElementById('finish').disabled = false; } });
+    </script>
+</body>
+
+</html>

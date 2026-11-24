@@ -1,28 +1,67 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-5HQ9DHSM"></script>
-    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());</script>
-    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Revisa tu carrito de compra Vigilix y continúa al envío."><title>Carrito | Vigilix</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="checkout/checkout.css">
+   <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-WQHF4V39"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Revisa tu carrito de compra Vigilix y continúa al envío.">
+    <title>Carrito | Vigilix</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="checkout/checkout.css">
 </head>
+
 <body>
-    <header class="site-header"><div class="header-inner"><a class="brand" href="index.html"><span>◆</span> VIGILIX</a><a class="back-link" href="index.html#equipos">← Seguir comprando</a></div></header>
+    <header class="site-header">
+        <div class="header-inner"><a class="brand" href="index.html"><span>◆</span> VIGILIX</a><a class="back-link"
+                href="index.html#equipos">← Seguir comprando</a></div>
+    </header>
     <main class="checkout-shell">
-        <div class="eyebrow">Compra online</div><h1>Tu carrito</h1><p class="lead">Revisa los productos, cambia las cantidades y confirma el total antes de continuar.</p>
-        <ol class="steps" aria-label="Progreso de compra"><li class="active">1. Carrito</li><li>2. Envío</li><li>3. Confirmación</li></ol>
-        <div class="notice"><strong>Compra protegida:</strong> revisa el total antes de continuar. El pago se coordina contraentrega.</div>
-        <div id="cart-empty" class="panel empty hidden"><div class="icon">🛒</div><h2>Tu carrito está vacío</h2><p class="muted">Explora nuestro catálogo de seguridad electrónica.</p><a class="button button-secondary" href="index.html#equipos">Ver catálogo</a></div>
+        <div class="eyebrow">Compra online</div>
+        <h1>Tu carrito</h1>
+        <p class="lead">Revisa los productos, cambia las cantidades y confirma el total antes de continuar.</p>
+        <ol class="steps" aria-label="Progreso de compra">
+            <li class="active">1. Carrito</li>
+            <li>2. Envío</li>
+            <li>3. Confirmación</li>
+        </ol>
+        <div class="notice"><strong>Compra protegida:</strong> revisa el total antes de continuar. El pago se coordina
+            contraentrega.</div>
+        <div id="cart-empty" class="panel empty hidden">
+            <div class="icon">🛒</div>
+            <h2>Tu carrito está vacío</h2>
+            <p class="muted">Explora nuestro catálogo de seguridad electrónica.</p><a class="button button-secondary"
+                href="index.html#equipos">Ver catálogo</a>
+        </div>
         <div id="cart-layout" class="layout hidden">
-            <section class="panel" aria-labelledby="cart-title"><h2 id="cart-title">Productos</h2><div id="cart-items"></div></section>
-            <aside class="panel" aria-labelledby="summary-title"><h2 id="summary-title">Resumen</h2><div class="summary-line"><span>Subtotal</span><strong id="subtotal"></strong></div><div class="summary-line"><span>Envío</span><span>Se calcula después</span></div><div class="summary-line summary-total"><span>Total parcial</span><strong id="total"></strong></div><a class="button button-primary" id="continue-button" href="checkout/envio.html">Continuar al envío →</a></aside>
+            <section class="panel" aria-labelledby="cart-title">
+                <h2 id="cart-title">Productos</h2>
+                <div id="cart-items"></div>
+            </section>
+            <aside class="panel" aria-labelledby="summary-title">
+                <h2 id="summary-title">Resumen</h2>
+                <div class="summary-line"><span>Subtotal</span><strong id="subtotal"></strong></div>
+                <div class="summary-line"><span>Envío</span><span>Se calcula después</span></div>
+                <div class="summary-line summary-total"><span>Total parcial</span><strong id="total"></strong></div><a
+                    class="button button-primary" id="continue-button" href="checkout/envio.html">Continuar al envío
+                    →</a>
+            </aside>
         </div>
     </main>
     <script src="commerce.js"></script>
     <script>
-        const commerce=window.VigilixCommerce,empty=document.getElementById('cart-empty'),layout=document.getElementById('cart-layout'),itemsContainer=document.getElementById('cart-items');
-        function escapeHtml(value){return String(value).replace(/[&<>'"]/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));}
-        function renderCart(){const items=commerce.getDetailedCart();empty.classList.toggle('hidden',items.length>0);layout.classList.toggle('hidden',items.length===0);if(!items.length)return;itemsContainer.innerHTML=items.map(item=>`<article class="cart-row"><img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.name)}"><div><p class="item-name">${escapeHtml(item.name)}</p><div class="muted">SKU: ${escapeHtml(item.sku)} · ${commerce.formatMoney(item.price)} c/u</div><div class="qty-wrap"><label for="qty-${escapeHtml(item.sku)}">Cantidad</label><input id="qty-${escapeHtml(item.sku)}" type="number" min="1" max="99" value="${item.quantity}" data-qty="${escapeHtml(item.sku)}"><button class="button button-danger" type="button" data-remove="${escapeHtml(item.sku)}">Eliminar</button></div></div><strong class="cart-price">${commerce.formatMoney(item.subtotal)}</strong></article>`).join('');const total=commerce.formatMoney(commerce.subtotal());document.getElementById('subtotal').textContent=total;document.getElementById('total').textContent=total;}
-        itemsContainer.addEventListener('change',event=>{const sku=event.target.dataset.qty;if(sku)commerce.updateQuantity(sku,Number(event.target.value));});itemsContainer.addEventListener('click',event=>{const sku=event.target.dataset.remove;if(sku)commerce.removeItem(sku);});window.addEventListener('vigilix:cart-updated',renderCart);document.getElementById('continue-button').addEventListener('click',()=>commerce.trackCartEvent('begin_checkout'));commerce.trackCartEvent('view_cart');renderCart();
+        const commerce = window.VigilixCommerce, empty = document.getElementById('cart-empty'), layout = document.getElementById('cart-layout'), itemsContainer = document.getElementById('cart-items');
+        function escapeHtml(value) { return String(value).replace(/[&<>'"]/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[char])); }
+        function renderCart() { const items = commerce.getDetailedCart(); empty.classList.toggle('hidden', items.length > 0); layout.classList.toggle('hidden', items.length === 0); if (!items.length) return; itemsContainer.innerHTML = items.map(item => `<article class="cart-row"><img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.name)}"><div><p class="item-name">${escapeHtml(item.name)}</p><div class="muted">SKU: ${escapeHtml(item.sku)} · ${commerce.formatMoney(item.price)} c/u</div><div class="qty-wrap"><label for="qty-${escapeHtml(item.sku)}">Cantidad</label><input id="qty-${escapeHtml(item.sku)}" type="number" min="1" max="99" value="${item.quantity}" data-qty="${escapeHtml(item.sku)}"><button class="button button-danger" type="button" data-remove="${escapeHtml(item.sku)}">Eliminar</button></div></div><strong class="cart-price">${commerce.formatMoney(item.subtotal)}</strong></article>`).join(''); const total = commerce.formatMoney(commerce.subtotal()); document.getElementById('subtotal').textContent = total; document.getElementById('total').textContent = total; }
+        itemsContainer.addEventListener('change', event => { const sku = event.target.dataset.qty; if (sku) commerce.updateQuantity(sku, Number(event.target.value)); }); itemsContainer.addEventListener('click', event => { const sku = event.target.dataset.remove; if (sku) commerce.removeItem(sku); }); window.addEventListener('vigilix:cart-updated', renderCart); document.getElementById('continue-button').addEventListener('click', () => commerce.trackCartEvent('begin_checkout')); commerce.trackCartEvent('view_cart'); renderCart();
     </script>
-</body></html>
+</body>
+
+</html>

@@ -1,21 +1,88 @@
 <!DOCTYPE html>
-<html lang="es"><head>
-    <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-5HQ9DHSM"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());</script>
-    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Datos de envío | Vigilix</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="checkout.css">
-</head><body>
-    <header class="site-header"><div class="header-inner"><a class="brand" href="../index.html"><span>◆</span> VIGILIX</a><a class="back-link" href="../carrito.html">← Volver al carrito</a></div></header>
-    <main class="checkout-shell"><div class="eyebrow">Compra online</div><h1>Datos de entrega</h1><p class="lead">Completa tus datos de contacto y elige cómo recibir tu pedido.</p>
-        <ol class="steps"><li>1. Carrito</li><li class="active">2. Envío</li><li>3. Confirmación</li></ol><div class="notice"><strong>Entrega coordinada:</strong> verificaremos la dirección y disponibilidad antes del despacho.</div>
-        <div class="layout"><form id="shipping-form" class="panel" novalidate><h2>Contacto y entrega</h2>
-            <div class="field-grid"><div class="field"><label for="name">Nombre y apellido</label><input id="name" name="name" autocomplete="name" required minlength="3"></div><div class="field"><label for="phone">Celular</label><input id="phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel" required pattern="[0-9 +()-]{7,15}"></div></div>
-            <div class="field"><label for="email">Correo</label><input id="email" name="email" type="email" autocomplete="email" required></div>
-            <fieldset class="field" style="border:0;padding:0;margin-inline:0"><legend style="font-weight:800;margin-bottom:10px">Método de entrega</legend><label class="radio-card"><input type="radio" name="deliveryMethod" value="delivery-lima" checked><strong>Envío en Lima Metropolitana — S/ 10.00</strong><small>Entrega coordinada según cobertura y disponibilidad.</small></label><label class="radio-card"><input type="radio" name="deliveryMethod" value="pickup"><strong>Recojo coordinado — Gratis</strong><small>Te contactaremos para acordar la ubicación y el horario.</small></label></fieldset>
-            <div id="address-fields"><div class="field"><label for="address">Dirección</label><input id="address" name="address" autocomplete="street-address" required></div><div class="field-grid"><div class="field"><label for="district">Distrito</label><input id="district" name="district" required></div><div class="field"><label for="reference">Referencia</label><input id="reference" name="reference"></div></div></div>
-            <label style="font-weight:400;margin:8px 0 18px"><input style="width:auto" type="checkbox" required> Confirmo que los datos de contacto y entrega son correctos.</label><button class="button button-primary" type="submit">Continuar a contraentrega →</button><p id="form-error" class="error" role="alert"></p>
-        </form><aside class="panel"><h2>Resumen</h2><div id="summary-items"></div><div class="summary-line"><span>Subtotal</span><strong id="subtotal"></strong></div><div class="summary-line"><span>Envío</span><strong id="shipping-cost"></strong></div><div class="summary-line summary-total"><span>Total</span><strong id="total"></strong></div></aside></div>
-    </main><script src="../commerce.js"></script><script>
-        const commerce=window.VigilixCommerce;if(!commerce.count())location.replace('../carrito.html');const form=document.getElementById('shipping-form'),addressFields=document.getElementById('address-fields'),address=document.getElementById('address'),district=document.getElementById('district');
-        function selectedMethod(){return form.elements.deliveryMethod.value;}function renderSummary(){document.getElementById('summary-items').innerHTML=commerce.getDetailedCart().map(item=>`<div class="summary-line"><span>${item.quantity} × ${item.name}</span><strong>${commerce.formatMoney(item.subtotal)}</strong></div>`).join('');const cost=commerce.shippingCost(selectedMethod());document.getElementById('subtotal').textContent=commerce.formatMoney(commerce.subtotal());document.getElementById('shipping-cost').textContent=cost?commerce.formatMoney(cost):'Gratis';document.getElementById('total').textContent=commerce.formatMoney(commerce.subtotal()+cost);}function toggleAddress(){const delivery=selectedMethod()==='delivery-lima';addressFields.classList.toggle('hidden',!delivery);address.required=delivery;district.required=delivery;renderSummary();}
-        form.addEventListener('change',event=>{if(event.target.name==='deliveryMethod')toggleAddress();});form.addEventListener('submit',event=>{event.preventDefault();if(!form.reportValidity())return;const data=Object.fromEntries(new FormData(form).entries());commerce.saveShipping(data);commerce.trackCartEvent('add_shipping_info',{shipping_tier:data.deliveryMethod});location.href='pago.html';});const previous=commerce.getShipping();if(previous)Object.entries(previous).forEach(([key,value])=>{const field=form.elements[key];if(field){if(field instanceof RadioNodeList){const radio=[...field].find(item=>item.value===value);if(radio)radio.checked=true;}else field.value=value;}});toggleAddress();renderSummary();
-    </script></body></html>
+<html lang="es">
+
+<head>
+    <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-WQHF4V39"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos de envío | Vigilix</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="checkout.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="header-inner"><a class="brand" href="../index.html"><span>◆</span> VIGILIX</a><a class="back-link"
+                href="../carrito.html">← Volver al carrito</a></div>
+    </header>
+    <main class="checkout-shell">
+        <div class="eyebrow">Compra online</div>
+        <h1>Datos de entrega</h1>
+        <p class="lead">Completa tus datos de contacto y elige cómo recibir tu pedido.</p>
+        <ol class="steps">
+            <li>1. Carrito</li>
+            <li class="active">2. Envío</li>
+            <li>3. Confirmación</li>
+        </ol>
+        <div class="notice"><strong>Entrega coordinada:</strong> verificaremos la dirección y disponibilidad antes del
+            despacho.</div>
+        <div class="layout">
+            <form id="shipping-form" class="panel" novalidate>
+                <h2>Contacto y entrega</h2>
+                <div class="field-grid">
+                    <div class="field"><label for="name">Nombre y apellido</label><input id="name" name="name"
+                            autocomplete="name" required minlength="3"></div>
+                    <div class="field"><label for="phone">Celular</label><input id="phone" name="phone" type="tel"
+                            inputmode="numeric" autocomplete="tel" required pattern="[0-9 +()-]{7,15}"></div>
+                </div>
+                <div class="field"><label for="email">Correo</label><input id="email" name="email" type="email"
+                        autocomplete="email" required></div>
+                <fieldset class="field" style="border:0;padding:0;margin-inline:0">
+                    <legend style="font-weight:800;margin-bottom:10px">Método de entrega</legend><label
+                        class="radio-card"><input type="radio" name="deliveryMethod" value="delivery-lima"
+                            checked><strong>Envío en Lima Metropolitana — S/ 10.00</strong><small>Entrega coordinada
+                            según cobertura y disponibilidad.</small></label><label class="radio-card"><input
+                            type="radio" name="deliveryMethod" value="pickup"><strong>Recojo coordinado —
+                            Gratis</strong><small>Te contactaremos para acordar la ubicación y el
+                            horario.</small></label>
+                </fieldset>
+                <div id="address-fields">
+                    <div class="field"><label for="address">Dirección</label><input id="address" name="address"
+                            autocomplete="street-address" required></div>
+                    <div class="field-grid">
+                        <div class="field"><label for="district">Distrito</label><input id="district" name="district"
+                                required></div>
+                        <div class="field"><label for="reference">Referencia</label><input id="reference"
+                                name="reference"></div>
+                    </div>
+                </div>
+                <label style="font-weight:400;margin:8px 0 18px"><input style="width:auto" type="checkbox" required>
+                    Confirmo que los datos de contacto y entrega son correctos.</label><button
+                    class="button button-primary" type="submit">Continuar a contraentrega →</button>
+                <p id="form-error" class="error" role="alert"></p>
+            </form>
+            <aside class="panel">
+                <h2>Resumen</h2>
+                <div id="summary-items"></div>
+                <div class="summary-line"><span>Subtotal</span><strong id="subtotal"></strong></div>
+                <div class="summary-line"><span>Envío</span><strong id="shipping-cost"></strong></div>
+                <div class="summary-line summary-total"><span>Total</span><strong id="total"></strong></div>
+            </aside>
+        </div>
+    </main>
+    <script src="../commerce.js"></script>
+    <script>
+        const commerce = window.VigilixCommerce; if (!commerce.count()) location.replace('../carrito.html'); const form = document.getElementById('shipping-form'), addressFields = document.getElementById('address-fields'), address = document.getElementById('address'), district = document.getElementById('district');
+        function selectedMethod() { return form.elements.deliveryMethod.value; } function renderSummary() { document.getElementById('summary-items').innerHTML = commerce.getDetailedCart().map(item => `<div class="summary-line"><span>${item.quantity} × ${item.name}</span><strong>${commerce.formatMoney(item.subtotal)}</strong></div>`).join(''); const cost = commerce.shippingCost(selectedMethod()); document.getElementById('subtotal').textContent = commerce.formatMoney(commerce.subtotal()); document.getElementById('shipping-cost').textContent = cost ? commerce.formatMoney(cost) : 'Gratis'; document.getElementById('total').textContent = commerce.formatMoney(commerce.subtotal() + cost); } function toggleAddress() { const delivery = selectedMethod() === 'delivery-lima'; addressFields.classList.toggle('hidden', !delivery); address.required = delivery; district.required = delivery; renderSummary(); }
+        form.addEventListener('change', event => { if (event.target.name === 'deliveryMethod') toggleAddress(); }); form.addEventListener('submit', event => { event.preventDefault(); if (!form.reportValidity()) return; const data = Object.fromEntries(new FormData(form).entries()); commerce.saveShipping(data); commerce.trackCartEvent('add_shipping_info', { shipping_tier: data.deliveryMethod }); location.href = 'pago.html'; }); const previous = commerce.getShipping(); if (previous) Object.entries(previous).forEach(([key, value]) => { const field = form.elements[key]; if (field) { if (field instanceof RadioNodeList) { const radio = [...field].find(item => item.value === value); if (radio) radio.checked = true; } else field.value = value; } }); toggleAddress(); renderSummary();
+    </script>
+</body>
+
+</html>
