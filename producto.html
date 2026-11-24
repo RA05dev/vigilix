@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-5HQ9DHSM"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());</script>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Consulta características, especificaciones y precio de productos de seguridad electrónica Vigilix.">
+    <title>Detalle de producto | Vigilix</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css"><link rel="stylesheet" href="producto.css">
+</head>
+<body>
+    <header><div class="container header-content">
+        <a href="index.html" class="logo"><i class="fa-solid fa-shield-halved"></i> VIGILIX</a>
+        <nav class="nav-menu"><a href="index.html#soluciones">Soluciones</a><a href="index.html#equipos">Equipos</a><a href="index.html#licencias">Licencias</a><a href="index.html#soporte">Soporte</a><a href="index.html#cotizar" class="nav-cta">Cotizar</a></nav>
+        <div class="header-tools"><a href="carrito.html" class="cart-wrapper" title="Ir al carrito"><i class="fa-solid fa-cart-shopping"></i><div class="cart-counter" id="cart-counter">0</div></a></div>
+    </div></header>
+
+    <main id="product-content" class="hidden">
+        <section class="product-page"><div class="container">
+            <nav class="breadcrumbs" aria-label="Ruta de navegación"><a href="index.html">Inicio</a><span>/</span><a href="index.html#equipos">Catálogo</a><span>/</span><span id="breadcrumb-name"></span></nav>
+            <div class="product-layout">
+                <div class="product-gallery"><div class="product-main-image"><span class="stock-badge"><i class="fa-solid fa-check"></i> Disponible</span><img id="product-image" alt=""></div><div class="gallery-caption"><i class="fa-solid fa-shield-halved"></i><span>Distribución y soporte especializado Vigilix</span></div></div>
+                <div class="product-info">
+                    <span class="badge-tech"><i class="fa-solid fa-layer-group"></i> <span id="product-category"></span></span>
+                    <h1 id="product-name"></h1><p class="product-intro" id="product-description"></p>
+                    <div class="product-meta"><span><strong>SKU:</strong> <span id="product-sku"></span></span><span><strong>Disponibilidad:</strong> En stock</span><span><strong>Moneda:</strong> Soles</span></div>
+                    <div class="product-price-box"><div class="product-price" id="product-price"></div><div class="product-price-note">Precio online por unidad · Pago contraentrega disponible</div></div>
+                    <ul class="a9-features" id="product-features"></ul>
+                    <div class="purchase-row"><div class="quantity-control"><label for="quantity">Cantidad</label><input id="quantity" type="number" min="1" max="20" value="1"></div><div class="buy-actions"><button type="button" class="btn-outline" onclick="addSelected()"><i class="fa-solid fa-cart-plus"></i> Agregar</button><button type="button" class="btn-primary" onclick="buyNow()"><i class="fa-solid fa-bag-shopping"></i> Comprar ahora</button></div></div>
+                    <div class="commercial-benefits"><div class="commercial-benefit"><i class="fa-solid fa-truck-fast"></i><div><strong>Entrega coordinada</strong><small>Cobertura según ubicación</small></div></div><div class="commercial-benefit"><i class="fa-solid fa-hand-holding-dollar"></i><div><strong>Pago contraentrega</strong><small>Paga al momento de recibir</small></div></div><div class="commercial-benefit"><i class="fa-solid fa-headset"></i><div><strong>Asesoría especializada</strong><small>Ayuda para elegir e implementar</small></div></div><div class="commercial-benefit"><i class="fa-solid fa-file-invoice"></i><div><strong>Precios por volumen</strong><small>Cotización para proyectos</small></div></div></div>
+                </div>
+            </div>
+        </div></section>
+
+        <section class="product-section alt"><div class="container"><div class="section-header"><h2><i class="fa-solid fa-circle-check"></i> Características principales</h2><p>Funciones y capacidades más importantes de este producto.</p></div><div class="detail-grid" id="feature-cards"></div></div></section>
+        <section class="product-section"><div class="container"><div class="spec-layout"><div class="section-header"><h2><i class="fa-solid fa-list-check"></i> Especificaciones</h2><p>Información técnica para evaluar la compatibilidad con tu instalación o proyecto.</p></div><table class="spec-table"><tbody id="spec-table"></tbody></table></div></div></section>
+        <section class="product-section alt"><div class="container"><div class="section-header"><h2><i class="fa-solid fa-route"></i> Compra y atención</h2><p>Un proceso claro desde la selección hasta la entrega.</p></div><div class="steps-grid"><article class="setup-step"><h3>Selecciona</h3><p>Revisa las características y elige la cantidad necesaria.</p></article><article class="setup-step"><h3>Confirma</h3><p>Completa los datos de entrega y revisa el resumen.</p></article><article class="setup-step"><h3>Coordinamos</h3><p>Validamos disponibilidad, cobertura y fecha de entrega.</p></article><article class="setup-step"><h3>Recibe</h3><p>Recibe el producto y realiza el pago según la modalidad elegida.</p></article></div></div></section>
+        <section class="product-section"><div class="container"><div class="section-header" style="text-align:center;align-items:center"><h2><i class="fa-solid fa-circle-question"></i> Preguntas frecuentes</h2><p>Información útil antes de confirmar el pedido.</p></div><div class="faq-list"><details><summary>¿Puedo solicitar varias unidades?</summary><p>Sí. Agrega la cantidad al carrito o solicita una cotización para recibir atención por volumen.</p></details><details><summary>¿Cómo se coordina la entrega?</summary><p>Después de generar el pedido, se valida la cobertura y se coordina la fecha de entrega o recojo.</p></details><details><summary>¿Ofrecen soporte para la instalación?</summary><p>Vigilix ofrece orientación comercial y soporte de ingeniería según el tipo de equipo y proyecto.</p></details><details><summary>¿Puedo pedir una cotización formal?</summary><p>Sí. Usa el formulario de cotización para proyectos, licitaciones o compras por volumen.</p></details></div></div></section>
+        <section class="product-section"><div class="container"><div class="product-cta"><div><h2 id="cta-name"></h2><p>Agrega el producto al carrito o solicita una cotización personalizada.</p></div><div class="a9-actions"><button type="button" class="btn-primary" onclick="buyNow()"><i class="fa-solid fa-cart-shopping"></i> Comprar ahora</button><a class="btn-outline" href="index.html#cotizar"><i class="fa-solid fa-file-signature"></i> Cotizar volumen</a></div></div></div></section>
+    </main>
+
+    <main id="product-missing" class="checkout-shell hidden"><section class="panel empty"><h1>Producto no encontrado</h1><p class="muted">El código solicitado no está disponible en el catálogo.</p><a class="button button-secondary" href="index.html#equipos">Volver al catálogo</a></section></main>
+    <footer><div class="container footer-bottom">© 2026 Vigilix Security Distribution. Seguridad electrónica para hogares y empresas.</div></footer><div id="toast-container"></div>
+
+    <script src="commerce.js"></script>
+    <script>
+        const params=new URLSearchParams(location.search),sku=params.get('sku'),product=VigilixCommerce.PRODUCTS[sku],cartCounter=document.getElementById('cart-counter');
+        function escapeHtml(value){return String(value).replace(/[&<>'"]/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));}
+        function refreshCounter(){cartCounter.textContent=VigilixCommerce.count();}
+        function selectedQuantity(){return Math.max(1,Math.min(20,Number(document.getElementById('quantity').value)||1));}
+        function addSelected(){const quantity=selectedQuantity();VigilixCommerce.addItem(sku,quantity);refreshCounter();showToast(`${quantity} ${quantity===1?'unidad agregada':'unidades agregadas'} al carrito`);}
+        function buyNow(){VigilixCommerce.addItem(sku,selectedQuantity());location.href='carrito.html';}
+        function showToast(message){const toast=document.createElement('div');toast.className='toast';toast.innerHTML=`<div class="toast-icon"><i class="fa-solid fa-circle-check"></i></div><div class="toast-content"><h5>Carrito actualizado</h5><p>${message}</p></div>`;document.getElementById('toast-container').appendChild(toast);setTimeout(()=>{toast.classList.add('fade-out');setTimeout(()=>toast.remove(),350)},3000);}
+        if(!product){document.getElementById('product-missing').classList.remove('hidden');}
+        else{
+            document.getElementById('product-content').classList.remove('hidden');document.title=`${product.name} | Vigilix`;document.getElementById('breadcrumb-name').textContent=product.name;document.getElementById('product-category').textContent=product.category;document.getElementById('product-name').textContent=product.name;document.getElementById('product-description').textContent=product.description;document.getElementById('product-sku').textContent=product.sku;document.getElementById('product-price').textContent=VigilixCommerce.formatMoney(product.price);document.getElementById('product-image').src=product.image;document.getElementById('product-image').alt=product.name;document.getElementById('cta-name').textContent=`${product.name} listo para tu proyecto`;
+            document.getElementById('product-features').innerHTML=product.features.map(item=>`<li><i class="fa-solid fa-check"></i> ${escapeHtml(item)}</li>`).join('');
+            const icons=['fa-shield-halved','fa-gears','fa-diagram-project','fa-circle-check'];document.getElementById('feature-cards').innerHTML=product.features.map((item,index)=>`<article class="detail-card"><i class="fa-solid ${icons[index%icons.length]}"></i><h3>${escapeHtml(item)}</h3><p>Característica integrada para mejorar la operación y el desempeño de la solución.</p></article>`).join('');
+            document.getElementById('spec-table').innerHTML=Object.entries(product.specs).map(([key,value])=>`<tr><th>${escapeHtml(key)}</th><td>${escapeHtml(value)}</td></tr>`).join('');
+            VigilixCommerce.track('view_item',{value:product.price,items:[{item_id:product.sku,item_name:product.name,item_category:product.category,price:product.price,quantity:1}]});
+        }
+        refreshCounter();window.addEventListener('vigilix:cart-updated',refreshCounter);
+    </script>
+</body>
+</html>

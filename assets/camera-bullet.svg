@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-labelledby="title desc">
+  <title id="title">Cámara Bullet IP 4MP</title>
+  <desc id="desc">Ilustración de una cámara de seguridad tipo bullet para exterior.</desc>
+  <defs>
+    <linearGradient id="body" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7fafc"/>
+      <stop offset="1" stop-color="#aab7c4"/>
+    </linearGradient>
+    <radialGradient id="lens">
+      <stop offset="0" stop-color="#00f2fe"/>
+      <stop offset=".28" stop-color="#17374b"/>
+      <stop offset="1" stop-color="#05090f"/>
+    </radialGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#02060b" flood-opacity=".45"/>
+    </filter>
+  </defs>
+  <rect width="800" height="520" fill="#101722"/>
+  <path d="M0 420 800 300v220H0z" fill="#0b111a"/>
+  <g filter="url(#shadow)" transform="translate(90 68)">
+    <path d="M424 294h62l64 104h-52l-56-64h-78z" fill="#788998"/>
+    <path d="M516 390h122v32H516z" rx="12" fill="url(#body)"/>
+    <path d="M565 416h24v44h-24z" fill="#8798a8"/>
+    <ellipse cx="577" cy="465" rx="77" ry="18" fill="#657787"/>
+    <path d="M142 94h318c60 0 108 48 108 108v42c0 60-48 108-108 108H142z" fill="url(#body)"/>
+    <path d="M118 112h94v222h-94c-58 0-104-46-104-104v-14c0-58 46-104 104-104z" fill="#d9e1e7"/>
+    <ellipse cx="124" cy="223" rx="91" ry="106" fill="#5d6e7c"/>
+    <ellipse cx="124" cy="223" rx="70" ry="84" fill="#141d27"/>
+    <ellipse cx="124" cy="223" rx="47" ry="57" fill="url(#lens)"/>
+    <circle cx="104" cy="179" r="7" fill="#00f2fe" opacity=".8"/>
+    <circle cx="155" cy="190" r="6" fill="#ff9f43" opacity=".85"/>
+    <path d="M224 112h229c56 0 100 44 100 100v22c0 56-44 100-100 100H224z" fill="none" stroke="#fff" stroke-opacity=".34" stroke-width="6"/>
+    <path d="M280 153h154" stroke="#7e8e9d" stroke-width="10" stroke-linecap="round" opacity=".5"/>
+    <text x="316" y="264" fill="#1a2a37" font-family="Arial, sans-serif" font-size="26" font-weight="700">4MP IP</text>
+  </g>
+</svg>

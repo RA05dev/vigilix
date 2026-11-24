@@ -1,0 +1,8 @@
+<?php
+// Copia este archivo como config.local.php y usa la NUEVA contraseña rotada en InfinityFree.
+return [
+    'host' => 'TU_HOST_MYSQL',
+    'user' => 'TU_USUARIO_MYSQL',
+    'pass' => 'TU_NUEVA_CONTRASENA_MYSQL',
+    'db' => 'TU_BASE_DE_DATOS',
+];
